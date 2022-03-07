@@ -1,3 +1,18 @@
+// cancelling default styles
+
+p {
+    margin: 0;
+}
+
+// fonts, mixins, global vars
+
+@font-face {
+    src: url(fonts/avertaRegular.otf);
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: normal;
+} 
+
 @font-face {
     src: url(fonts/avertaSemibold.otf);
     font-family: 'Averta';
@@ -12,6 +27,12 @@
     font-style: normal;
 } 
 
+@mixin avertaReg {
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: normal;
+}
+
 @mixin avertaSemi {
     font-family: 'Averta';
     font-weight: 500;
@@ -24,9 +45,10 @@
     font-style: normal;
 }
 
-html {
-    font-size: 32px;
-}
+$slideHarsh1: cubic-bezier(0.53, 0.02, 0.32, 1);
+$textOrange1: rgb(236, 131, 26);
+
+// styles beginning
 
 #body {
     background-color: #fff;
@@ -34,23 +56,28 @@ html {
 }
 
 @media (max-width: 490px) {
+    html {
+        font-size: 32px;
+    }
+
     #header {
-        width: 100%;
+        width: 100vw;
         height: 80px;
-        position: sticky;
+        position: fixed;
+        z-index: 10;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        // background: rgb(245,133,20);
-        background: linear-gradient(90deg, rgb(255, 140, 25) 0%, rgb(221, 66, 19) 50%, rgba(210,16,16,1) 100%);
+        background: linear-gradient(90deg, rgb(255, 140, 26) 0%, rgb(221, 66, 19) 50%, rgba(210,16,16,1) 100%);
 
         #headerLogoCont {
-            margin-left: 40px;
+            margin-left: 50px;
         }
 
         #headerLogo {
-            width: 136px;
+            width: 124px;
+            margin-top: 8px;
         }
 
         #headerMenuIconCont {
@@ -58,9 +85,30 @@ html {
 
             #headerMenuIcon {
                 width: 40px;
+                margin-top: 6px;
             }
-        }
-        
+        }   
+    }
+
+    // keyframes for screen1 container
+
+    @keyframes s1Arrow {
+        0% {bottom: 30px; opacity: 0.5;}
+        80% {opacity: 1;}
+        100% {bottom: 0px;}
+    }
+
+    @keyframes s1Cloud {
+        100% {right: 0vw;}
+    }
+
+    @keyframes s1Solutions {
+        100% {left: 0vw;}
+    }
+
+    @keyframes s1Foreveryone {
+        0% {opacity: 0;};
+        100% {opacity: 1;};
     }
 
     #screen1 {
@@ -68,29 +116,85 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         background-image: url(images/bg1.jpg);
         background-position: center;
-        background-size: 100% 100%;
+        background-size: auto 100%;
 
         #s1Caption {
             margin: 0 auto;
             width: 80%;
-
         }
 
         #s1CaptionTop {
-            font-size: 2rem;
+            font-size: 16vw;
+            line-height: 2rem;
             color: #fff;
             text-align: center;
             @include avertaSemi;
+
+            #cloud {
+                position: relative;
+                right: 100vw;  
+                // js function s1Animate() after onload
+            }
+
+            #solutions {
+                position: relative;
+                left: 100vw;
+                // js function s1Animate() after onload
+            }
+
+            #foreveryone {
+                opacity: 0;
+                // js function s1Animate() after onload
+            }
         }
 
         #s1CaptionSub {
-            font-size: 1.4rem;
+            font-size: 8vw;
             color: #fff;
             text-align: center;
             @include avertaLight;
+        }
+
+        #s1Arrow {
+            position: relative;
+            width: 20vw;
+            margin-top: 27vh;
+            margin-bottom: 4vh;
+            animation-name: s1Arrow;
+            animation-duration: 1.2s;
+            animation-timing-function: $slideHarsh1;
+            animation-iteration-count: infinite;
+        }
+    }
+
+    #screen2 {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 1.5rem;
+
+        #s2Caption {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            #thepowerof {
+                font-size: 8vw;
+                text-align: center;
+                @include avertaReg;
+                color: $textOrange1;
+                margin-bottom: 20px;
+            }
+
+            #s2Logo {
+                width: 46vw;
+            }
         }
     }
 }
