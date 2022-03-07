@@ -1,0 +1,78 @@
+@font-face {
+  src: url(fonts/avertaSemibold.otf);
+  font-family: "Averta";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: url(fonts/avertaLight.otf);
+  font-family: "Averta";
+  font-weight: 300;
+  font-style: normal;
+}
+html {
+  font-size: 32px;
+}
+
+#body {
+  background-color: #fff;
+  margin: 0;
+}
+
+@media (max-width: 490px) {
+  #header {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #ff8c19 0%, #dd4213 50%, #d21010 100%);
+  }
+  #header #headerLogoCont {
+    margin-left: 40px;
+  }
+  #header #headerLogo {
+    width: 136px;
+  }
+  #header #headerMenuIconCont {
+    margin-right: 24px;
+  }
+  #header #headerMenuIconCont #headerMenuIcon {
+    width: 40px;
+  }
+
+  #screen1 {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/bg1.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  #screen1 #s1Caption {
+    margin: 0 auto;
+    width: 80%;
+  }
+  #screen1 #s1CaptionTop {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    font-family: "Averta";
+    font-weight: 500;
+    font-style: normal;
+  }
+  #screen1 #s1CaptionSub {
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    font-family: "Averta";
+    font-weight: 300;
+    font-style: normal;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
