@@ -106,7 +106,7 @@ $textOrange1: rgb(236, 131, 26);
         100% {left: 0vw;}
     }
 
-    @keyframes s1Foreveryone {
+    @keyframes opacity0to1 {
         0% {opacity: 0;};
         100% {opacity: 1;};
     }
@@ -194,6 +194,8 @@ $textOrange1: rgb(236, 131, 26);
 
             #s2Logo {
                 width: 46vw;
+                opacity: 0;
+                // js function s1Animate() after onload
             }
         }
     }

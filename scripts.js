@@ -8,5 +8,27 @@ pageIsLoaded = setTimeout(function s1Animate() {
     solutions.style.cssText += 'animation-name: s1Solutions;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.38, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
 
     const foreveryone = document.querySelector('#foreveryone');
-    foreveryone.style.cssText += 'animation-name: s1Foreveryone;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.88, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;'
+    foreveryone.style.cssText += 'animation-name: opacity0to1;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.88, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
+
 }, 200);
+
+pageIsLoaded = setTimeout(function s1ArrowAnimate() {
+    const s1Arrow = document.querySelector('#s1Arrow');
+    s1Arrow.style.cssText += 'animation-name: opacity0to1;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.88, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
+}, 600);
+
+(function s2LogoAnimate() {
+    const s2Logo = document.querySelector('#s2Logo');
+    const animationOn = 'animation-name: opacity0to1;animation-duration: 2.5s;animation-timing-function: cubic-bezier(0.59, 0, 0.43, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
+    function checkAndAnimate() {
+        const scroll = window.scrollY;
+        if (scroll >= 315) {
+            s2Logo.style.cssText += animationOn;
+            clearInterval(s2LogoTimer);
+        }
+    }
+    const s2LogoTimer = setInterval(checkAndAnimate, 300); 
+} ());
+
+
+    

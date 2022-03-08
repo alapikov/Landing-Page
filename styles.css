@@ -78,7 +78,7 @@ p {
       left: 0vw;
     }
   }
-  @keyframes s1Foreveryone {
+  @keyframes opacity0to1 {
     0% {
       opacity: 0;
     }
@@ -164,6 +164,7 @@ p {
   }
   #screen2 #s2Caption #s2Logo {
     width: 46vw;
+    opacity: 0;
   }
 }
 
