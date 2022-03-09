@@ -1,5 +1,18 @@
 pageIsLoaded = window.onload;
 
+(function adaptHeader() {
+    const screenRatio = (document.documentElement.clientHeight  / document.documentElement.clientWidth).toFixed(3);
+    if (screenRatio <= 1.944) {
+        const header = document.querySelector('#header');
+        header.style.height = '66px';
+        const headerLogo = document.querySelector('#headerLogo');
+        headerLogo.style.width = '110px';
+        const headerMenuIcon = document.querySelector('#headerMenuIcon');
+        headerMenuIcon.style.width = '36px';
+        headerMenuIcon.style.marginTop = '7px';
+    }
+} ());
+
 pageIsLoaded = setTimeout(function s1Animate() {
     const cloud = document.querySelector('#cloud');
     cloud.style.cssText += 'animation-name: s1Cloud;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.38, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
@@ -29,6 +42,8 @@ pageIsLoaded = setTimeout(function s1ArrowAnimate() {
     }
     const s2LogoTimer = setInterval(checkAndAnimate, 300); 
 } ());
+
+
 
 
     
