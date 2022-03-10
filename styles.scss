@@ -4,6 +4,10 @@ p {
     margin: 0;
 }
 
+span {
+    display: inline-block;
+}
+
 // fonts, mixins, global vars
 
 @font-face {
@@ -12,6 +16,13 @@ p {
     font-weight: 400;
     font-style: normal;
 } 
+
+@font-face {
+    src: url(fonts/avertaRegularIt.otf);
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: italic;
+}
 
 @font-face {
     src: url(fonts/avertaSemibold.otf);
@@ -25,7 +36,7 @@ p {
     font-family: 'Averta';
     font-weight: 300;
     font-style: normal;
-} 
+}  
 
 @font-face {
     src: url(fonts/sourcesansRegular.ttf);
@@ -38,6 +49,12 @@ p {
     font-family: 'Averta';
     font-weight: 400;
     font-style: normal;
+}
+
+@mixin avertaRegIt {
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: italics;
 }
 
 @mixin avertaSemi {
@@ -61,6 +78,9 @@ p {
 $slideHarsh1: cubic-bezier(0.53, 0.02, 0.32, 1);
 $textOrange1: rgb(236, 131, 26);
 $textBlack1: rgb(27, 27, 27);
+$slideSmooth1: cubic-bezier(0.69, 0, 0.32, 1);
+$brandGradient1: linear-gradient(90deg, rgb(255, 140, 26) 0%, rgb(221, 66, 19) 50%, rgba(210,16,16,1) 100%);
+$brandGradient1rev: linear-gradient(270deg, rgb(255, 140, 26) 0%, rgb(221, 66, 19) 50%, rgba(210,16,16,1) 100%);
 
 // styles beginning
 
@@ -72,6 +92,10 @@ $textBlack1: rgb(27, 27, 27);
 @media (max-width: 490px) {
     html {
         font-size: 32px;
+    }
+
+    #body {
+        overflow-x: hidden;
     }
 
     #header {
@@ -209,58 +233,64 @@ $textBlack1: rgb(27, 27, 27);
             }
 
             #s2Logo {
-                width: 46vw;
+                width: 42vw;
                 opacity: 0;
                 // js function s1Animate() after onload
             }
         }
 
-        #s2FeaturesCont {
+        #s2FeaturesWindow {
             width: 86vw;
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
+            grid-gap: 80px;
             margin-top: 80px;
             margin-bottom: 50px;
-            overflow-y: hidden;
-            overflow-x: hidden;
+            overflow: hidden;
 
-            
-
-            .s2FeatureBlock {
+            #s2FeaturesCont {
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
-                margin-right: 80px;
-                // last .s2FeatureBlock has m-right: 0px, style below
-
-                img.s2FeatureImg {
-                    width: 44vw;
-                    margin-bottom: 12px;
+                // flex-direction: row;
+                // justify-content: flex-start;
+                // align-items: center;
+                grid-gap: 80px;
+                transition: all 0.7s $slideSmooth1;
+                // overflow: hidden;
+    
+                .s2FeatureBlock {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    // margin-right: 80px;
+                    // last .s2FeatureBlock has m-right: 0px, style below
+    
+                    img.s2FeatureImg {
+                        width: 44vw;
+                        margin-bottom: 12px;
+                    }
+    
+                    .s2FeatureCaption {
+                        font-size: 12vw;
+                        color: $textOrange1;
+                        text-align: center;
+                        @include avertaSemi;
+                        margin-bottom: 4px;
+                    }
+    
+                    .s2CaptionAnno {
+                        width: 86vw;
+                        font-size: 7vw;
+                        color: $textBlack1;
+                        text-align: center;
+                        @include sourcesansReg; 
+                    }
                 }
-
-                .s2FeatureCaption {
-                    font-size: 12vw;
-                    color: $textOrange1;
-                    text-align: center;
-                    @include avertaSemi;
-                    margin-bottom: 4px;
-                }
-
-                .s2CaptionAnno {
-                    width: 86vw;
-                    font-size: 7vw;
-                    color: $textBlack1;
-                    text-align: center;
-                    @include sourcesansReg; 
-                }
+    
+                // .s2FeatureBlock:last-of-type {
+                //     margin-right: 0px;
+                // }
             }
 
-            .s2FeatureBlock:last-of-type {
-                margin-right: 0px;
-            }
         }
 
         #s2Buttons {
@@ -268,16 +298,77 @@ $textBlack1: rgb(27, 27, 27);
             flex-direction: row;
             justify-content: center;
             align-items: center;
+            margin-bottom: 100px;
 
             #s2ArrowLeft {
-                height: 52px;
+                height: 12vw;
                 margin-right: 30px;
             }
 
             #s2ArrowRight {
-                height: 52px;
+                height: 12vw;
                 margin-left: 30px;
             }
+        }
+
+        #s2Button {
+            width: 68vw;
+            height: 72px;
+            margin-bottom: 100px;
+            border-radius: 40px;
+            background: $brandGradient1rev;
+            text-align: center;
+            line-height: 64px;
+            font-size: 8vw;
+            @include avertaReg;
+            color: #fff;
+        }
+    }
+
+    #screen3 {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: rgb(203 162 122);
+        
+        #s3Caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            @include avertaReg;
+            font-size: 8vw;
+            color: #fff;
+
+            #havealook {
+                opacity: 0;
+            }
+
+            #inside {
+                opacity: 0;
+            }
+        }
+
+        #s3ImgsCont {
+           width: 100vw;
+           height: 100vw;
+           display: flex;
+           flex-direction: row;
+           justify-content: flex-start;
+           align-items: center;
+           grid-gap: 60px;
+           overflow-y: hidden;
+           overflow-x: scroll;
+
+           img.s3Img {
+               width: 100vw;
+               height: 100vw;
+
+           }
         }
     }
 }

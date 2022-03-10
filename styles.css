@@ -2,11 +2,21 @@ p {
   margin: 0;
 }
 
+span {
+  display: inline-block;
+}
+
 @font-face {
   src: url(fonts/avertaRegular.otf);
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  src: url(fonts/avertaRegularIt.otf);
+  font-family: "Averta";
+  font-weight: 400;
+  font-style: italic;
 }
 @font-face {
   src: url(fonts/avertaSemibold.otf);
@@ -34,6 +44,10 @@ p {
 @media (max-width: 490px) {
   html {
     font-size: 32px;
+  }
+
+  #body {
+    overflow-x: hidden;
   }
 
   #header {
@@ -169,32 +183,33 @@ p {
     margin-bottom: 20px;
   }
   #screen2 #s2Caption #s2Logo {
-    width: 46vw;
+    width: 42vw;
     opacity: 0;
   }
-  #screen2 #s2FeaturesCont {
+  #screen2 #s2FeaturesWindow {
     width: 86vw;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    grid-gap: 80px;
     margin-top: 80px;
     margin-bottom: 50px;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
   }
-  #screen2 #s2FeaturesCont .s2FeatureBlock {
+  #screen2 #s2FeaturesWindow #s2FeaturesCont {
+    display: flex;
+    grid-gap: 80px;
+    transition: all 0.7s cubic-bezier(0.69, 0, 0.32, 1);
+  }
+  #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-right: 80px;
   }
-  #screen2 #s2FeaturesCont .s2FeatureBlock img.s2FeatureImg {
+  #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock img.s2FeatureImg {
     width: 44vw;
     margin-bottom: 12px;
   }
-  #screen2 #s2FeaturesCont .s2FeatureBlock .s2FeatureCaption {
+  #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2FeatureCaption {
     font-size: 12vw;
     color: #ec831a;
     text-align: center;
@@ -203,7 +218,7 @@ p {
     font-style: normal;
     margin-bottom: 4px;
   }
-  #screen2 #s2FeaturesCont .s2FeatureBlock .s2CaptionAnno {
+  #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2CaptionAnno {
     width: 86vw;
     font-size: 7vw;
     color: #1b1b1b;
@@ -212,22 +227,77 @@ p {
     font-weight: 400;
     font-style: normal;
   }
-  #screen2 #s2FeaturesCont .s2FeatureBlock:last-of-type {
-    margin-right: 0px;
-  }
   #screen2 #s2Buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
   }
   #screen2 #s2Buttons #s2ArrowLeft {
-    height: 52px;
+    height: 12vw;
     margin-right: 30px;
   }
   #screen2 #s2Buttons #s2ArrowRight {
-    height: 52px;
+    height: 12vw;
     margin-left: 30px;
+  }
+  #screen2 #s2Button {
+    width: 68vw;
+    height: 72px;
+    margin-bottom: 100px;
+    border-radius: 40px;
+    background: linear-gradient(270deg, #ff8c1a 0%, #dd4213 50%, #d21010 100%);
+    text-align: center;
+    line-height: 64px;
+    font-size: 8vw;
+    font-family: "Averta";
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+
+  #screen3 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #cba27a;
+  }
+  #screen3 #s3Caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-family: "Averta";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 8vw;
+    color: #fff;
+  }
+  #screen3 #s3Caption #havealook {
+    opacity: 0;
+  }
+  #screen3 #s3Caption #inside {
+    opacity: 0;
+  }
+  #screen3 #s3ImgsCont {
+    width: 100vw;
+    height: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    grid-gap: 60px;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+  #screen3 #s3ImgsCont img.s3Img {
+    width: 100vw;
+    height: 100vw;
   }
 }
 
