@@ -1,4 +1,4 @@
-pageIsLoaded = window.onload;
+pageIsLoaded = window.onload
 
 // not ultra-wide screens (16:9 to 17.5:9) optimizations
 
@@ -102,7 +102,7 @@ function shiftContainer(shiftProp) {
             case 4:
                 break;
             case 0:
-                s2FeaturesCont.style.transform = 'translateX(-20.8%)';
+                S2FEATURESCONT.style.transform = 'translateX(-20.8%)';
                 break;
             case 1:
                 s2FeaturesCont.style.transform = 'translateX(-41.6%)';
