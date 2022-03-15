@@ -263,7 +263,7 @@ span {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    background-color: #cba27a;
+    background-color: #e3bc97;
   }
   #screen3 #s3Caption {
     display: flex;
@@ -271,7 +271,7 @@ span {
     justify-content: flex-start;
     align-items: center;
     margin-top: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
     font-family: "Averta";
     font-weight: 400;
     font-style: normal;
@@ -284,20 +284,48 @@ span {
   #screen3 #s3Caption #inside {
     opacity: 0;
   }
-  #screen3 #s3ImgsCont {
+  #screen3 #s3ImgsWindow {
     width: 100vw;
-    height: 100vw;
+    height: 115vw;
+    margin-bottom: 100px;
+    display: flex;
+    overflow: hidden;
+  }
+  #screen3 #s3ImgsWindow #s3ImgsCont {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    grid-gap: 60px;
-    overflow-y: hidden;
-    overflow-x: scroll;
+    grid-gap: 30px;
+    transition: all 0.6s cubic-bezier(0.69, 0, 0.32, 1);
   }
-  #screen3 #s3ImgsCont img.s3Img {
-    width: 100vw;
-    height: 100vw;
+  #screen3 #s3ImgsWindow #s3ImgsCont img.s3Img {
+    width: 73vw;
+    height: 115vw;
+    object-fit: cover;
+  }
+  #screen3 #s3ImgsWindow #s3ImgsCont img.s3Img:first-of-type {
+    padding-left: 13.5vw;
+  }
+  #screen3 #s3ImgsWindow #s3ImgsCont img.s3Img:last-of-type {
+    padding-right: 13.5vw;
+  }
+  #screen3 #s3ImgsWindow #s3ImgsArrows {
+    position: absolute;
+    height: 115vw;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #screen3 #s3ImgsWindow #s3ImgsArrows #s3ImgsLeft {
+    height: 14vw;
+    padding-left: 11vw;
+  }
+  #screen3 #s3ImgsWindow #s3ImgsArrows #s3ImgsRight {
+    height: 14vw;
+    padding-right: 11vw;
   }
 }
 
