@@ -1,0 +1,19 @@
+sass --watch styles.scss styles.css
+
+!! const name in JS always equals its HTML id, e.g. const headerMenuIcon = document.querySelector('#headerMenuIcon');
+
+screen width border for mobiles #1 - 86vw;
+
+05.03.22 - css 74 correct picture look
+07.03.22 - screen 2 added
+08.03.22 - further design of screen 2
+09.03.22 - js animations added
+10.03.22 - screen 3 added, carousel animation of s2Features added
+11.03.22 - screen 3 images added
+14.03.22 - screen 3 animation of images added
+15.03.22 - further design
+16.03.22 - screen 4 added (our team) and designed, screen 5 added
+
+------------ TO DO:
+- turn off resize of site on mobiles
+- add custom scroll

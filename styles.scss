@@ -76,11 +76,36 @@ span {
 }
 
 $slideHarsh1: cubic-bezier(0.53, 0.02, 0.32, 1);
+$transButton1: cubic-bezier(0.63, 0, 0.34, 1);
+$slideSmooth1: cubic-bezier(0.69, 0, 0.32, 1);
 $textOrange1: rgb(236, 131, 26);
 $textBlack1: rgb(27, 27, 27);
-$slideSmooth1: cubic-bezier(0.69, 0, 0.32, 1);
 $brandGradient1: linear-gradient(90deg, rgb(255, 140, 26) 0%, rgb(221, 66, 19) 50%, rgba(210,16,16,1) 100%);
 $brandGradient1rev: linear-gradient(270deg, rgb(255, 140, 26) 0%, rgb(221, 66, 19) 50%, rgba(210,16,16,1) 100%);
+
+// components 
+
+.buttonOrange1 {
+    border: 2px solid $textOrange1;
+    border-radius: 20px;
+        color: $textOrange1;
+        background-color: #fff;
+    @include avertaReg;
+    font-size: 5vw;
+    transition-property: color, background-color;
+    transition-duration: 0.7s;
+    transition-timing-function: $slideHarsh1;
+    transition-delay: 0s;
+}
+
+    .buttonOrange1:hover {
+        background-color: $textOrange1;
+        color: #fff;
+        transition-property: color, background-color;
+        transition-duration: 0.7s;
+        transition-timing-function: $slideHarsh1;
+        transition-delay: 0s;
+    }
 
 // styles beginning
 
@@ -331,7 +356,7 @@ $brandGradient1rev: linear-gradient(270deg, rgb(255, 140, 26) 0%, rgb(221, 66, 1
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        background-color: #e3bc97;
+        background-color: #dbb591;
         
         #s3Caption {
             display: flex;
@@ -356,7 +381,7 @@ $brandGradient1rev: linear-gradient(270deg, rgb(255, 140, 26) 0%, rgb(221, 66, 1
         #s3ImgsWindow {
             width: 100vw;
             height: 115vw;
-            margin-bottom: 100px;
+            margin-bottom: 40px;
             display: flex;
             overflow: hidden;
 
@@ -375,11 +400,11 @@ $brandGradient1rev: linear-gradient(270deg, rgb(255, 140, 26) 0%, rgb(221, 66, 1
                 }
      
                 img.s3Img:first-of-type {
-                     padding-left: 13.5vw;
+                    padding-left: 13.5vw;
                 }
      
                 img.s3Img:last-of-type {
-                     padding-right: 13.5vw;
+                    padding-right: 13.5vw;
                 }
             }
 
@@ -402,6 +427,167 @@ $brandGradient1rev: linear-gradient(270deg, rgb(255, 140, 26) 0%, rgb(221, 66, 1
                     padding-right: 11vw;
                 }  
             }
-        }  
+        } 
+
+        #s3Caption2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 50px;
+            @include avertaReg;
+            font-size: 8vw;
+            color: #fff;
+
+            #andgetdeeper {
+                opacity: 0;
+            }
+
+            #withvirtualtour {
+                opacity: 0;
+            }
+        }
+
+        #s3virtualTour {
+            width: 100vw;
+            height: 125vw;
+            background-color:#bbbbbb;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 60px;
+
+            #s3vtStatus {
+                width: 10%;
+               
+            }
+        }
     }
+
+    #screen4 {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+        background-color: #dbb591;
+
+        #s4Caption {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 40px;
+            @include avertaReg;
+            font-size: 8vw;
+            color: #fff;
+        }
+
+        .s4personBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 85vw;
+
+            .s4personImg {
+                width: 60vw;
+                border-radius: 60px;
+                margin-bottom: 6px;
+            }
+
+            .s4personName {
+                @include avertaSemi;
+                color: #fff;
+                font-size: 8vw;
+                margin-bottom: -2px;
+            }
+
+            .s4personPosition {
+                @include avertaLight;
+                color: #fff;
+                font-size: 6.5vw;
+                margin-bottom: 2px;
+            }
+
+            .s4personText {
+                @include sourcesansReg;
+                text-align: center;
+                color: #fff;
+                font-size: 6vw;
+                margin-bottom: 40px;
+            }
+        }
+    }
+
+    #screen5 {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        
+        #desktopappBox {
+            width: 85vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+            #s5Caption {
+                text-align: center;
+                @include sourcesansReg;
+                font-size: 7vw;
+                color: $textOrange1;
+                margin-bottom: 30px;
+            }
+
+            #s5buttonDesktop {
+                width: 40vw;
+                height: 60px;
+            }
+        }
+
+        #mobileappBox {
+            width: 85vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            #s5Caption2 {
+                text-align: center;
+                @include sourcesansReg;
+                font-size: 7vw;
+                color: $textOrange1;
+                margin-bottom: 30px;
+            }
+
+            #s5buttonMobile {
+                width: 40vw;
+                height: 60px;
+            }
+        }
+
+        #s5feedbackBox {
+            width: 85vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            
+            #s5Caption3 {
+                text-align: center;
+                @include avertaReg;
+                font-size: 7vw;
+            }
+        }
+    }
+    
 }

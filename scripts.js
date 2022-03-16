@@ -81,6 +81,21 @@ pageIsLoaded = setTimeout(function s1Animate() {
     const s3CaptionTimer = setInterval(checkAndAnimate, 300); 
 } ());
 
+(function s3Caption2Animate() {
+    const andgetdeeper = document.querySelector('#andgetdeeper');
+    const withvirtualtour = document.querySelector('#withvirtualtour');
+    const animationOn = 'animation-name: opacity0to1;animation-duration: 1s;animation-timing-function: cubic-bezier(0.59, 0, 0.43, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
+    function checkAndAnimate() {
+        const scroll = window.scrollY;
+        if (scroll >= 1920) {
+            andgetdeeper.style.cssText += animationOn;
+            setTimeout(() => {withvirtualtour.style.cssText += animationOn}, 500)
+            clearInterval(s3Caption);
+        }
+    }
+    const s3CaptionTimer = setInterval(checkAndAnimate, 300); 
+} ());
+
 
 // other animations
 
@@ -264,7 +279,6 @@ pageIsLoaded = setTimeout(function s1Animate() {
                 case 14:
                     s3ImgsCont.style.transform = 'translateX(-85.358%)';
                     break;
-
             }
         }
     }
