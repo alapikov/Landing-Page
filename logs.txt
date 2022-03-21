@@ -1,8 +1,17 @@
 sass --watch styles.scss styles.css
+sass --watch stylesCommon.scss stylesCommon.css
+sass --watch stylesMobile.scss stylesMobile.css
 
-!! const name in JS always equals its HTML id, e.g. const headerMenuIcon = document.querySelector('#headerMenuIcon');
-
-screen width border for mobiles #1 - 86vw;
+------------ code style rules:
+- !! const name in JS always equals its HTML id, e.g. const headerMenuIcon = document.querySelector('#headerMenuIcon');
+- screen width border for mobiles #1 - 86vw;
+- img alt description starts with capital letter
+- all variables, id, class names are in camel case (first letter is lowercased, word describing next object / instance has capital letter, no underlines)
+- no paragraphs between HTML tags
+- a paragraph between JS functions, also between other lines if needed
+- shorthands in naming: fb - facebook, yt - youtube, li - linkedin
+- double qoutes in HTML (" class "), sungle quotes in JS (' variable ')
+- classes of all elements except divs start with element name in CSS (img.class, span.class, .class for div), even if the class is used only for this element
 
 05.03.22 - css 74 correct picture look
 07.03.22 - screen 2 added
@@ -13,7 +22,9 @@ screen width border for mobiles #1 - 86vw;
 14.03.22 - screen 3 animation of images added
 15.03.22 - further design
 16.03.22 - screen 4 added (our team) and designed, screen 5 added
+17.03.22 - 
 
 ------------ TO DO:
 - turn off resize of site on mobiles
 - add custom scroll
+- adjust all styles, fonts, animations

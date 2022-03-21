@@ -1,0 +1,45 @@
+p {
+  margin: 0;
+}
+
+span {
+  display: inline-block;
+}
+
+#body {
+  background-color: #fff;
+  margin: 0;
+}
+
+@font-face {
+  src: url(fonts/avertaRegular.otf);
+  font-family: "Averta";
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  src: url(fonts/avertaRegularIt.otf);
+  font-family: "Averta";
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  src: url(fonts/avertaSemibold.otf);
+  font-family: "Averta";
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  src: url(fonts/avertaLight.otf);
+  font-family: "Averta";
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  src: url(fonts/sourcesansRegular.ttf);
+  font-family: "Source Sans Pro";
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*# sourceMappingURL=stylesCommon.css.map */

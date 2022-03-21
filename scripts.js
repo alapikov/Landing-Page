@@ -9,19 +9,23 @@ console.log ('screenRatio is: ' + screenRatio);
 (function adaptHeader() {
     if (screenRatio <= 1.945) {
         const header = document.querySelector('#header');
-        header.style.height = '66px';
+        header.style.height = '46px';
         const headerLogo = document.querySelector('#headerLogo');
-        headerLogo.style.width = '110px';
+        headerLogo.style.width = '86px';
         const headerMenuIcon = document.querySelector('#headerMenuIcon');
-        headerMenuIcon.style.width = '36px';
-        headerMenuIcon.style.marginTop = '7px';
+        headerMenuIcon.style.width = '28px';
+        headerMenuIcon.style.marginTop = '9px';
     }
 } ());
 
 (function adaptS2ContSize() {
     if (screenRatio <= 1.945) {
         const s2FeaturesWindow = document.querySelector('#s2FeaturesWindow');
-        s2FeaturesWindow.style.marginBottom = '35px'; 
+        s2FeaturesWindow.style.marginBottom = '20px';
+        const s2FeatureImg_s = document.querySelectorAll('.s2FeatureImg');
+        s2FeatureImg_s.forEach(img => {
+            img.style.marginBottom = '-2px';
+        })
     }
 } ());
 
@@ -37,21 +41,16 @@ console.log ('screenRatio is: ' + screenRatio);
 // animations on scroll / on pageload
 
 pageIsLoaded = setTimeout(function s1Animate() {
-    const cloud = document.querySelector('#cloud');
+    const cloud = document.querySelector('#s1Cloud');
     cloud.style.cssText += 'animation-name: s1Cloud;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.38, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
 
-    const solutions = document.querySelector('#solutions');
+    const solutions = document.querySelector('#s1Solutions');
     solutions.style.cssText += 'animation-name: s1Solutions;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.38, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
 
-    const foreveryone = document.querySelector('#foreveryone');
+    const foreveryone = document.querySelector('#s1Foreveryone');
     foreveryone.style.cssText += 'animation-name: opacity0to1;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.88, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
 
 }, 200);
-
-// pageIsLoaded = setTimeout(function s1ArrowAnimate() {
-//     const s1Arrow = document.querySelector('#s1Arrow');
-//     s1Arrow.style.cssText += 'animation-name: opacity0to1;animation-duration: 1.8s;animation-timing-function: cubic-bezier(0.88, 0, 0.33, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
-// }, 600);
 
 (function s2LogoAnimate() {
     const s2Logo = document.querySelector('#s2Logo');
@@ -67,14 +66,14 @@ pageIsLoaded = setTimeout(function s1Animate() {
 } ());
 
 (function s3CaptionAnimate() {
-    const havealook = document.querySelector('#havealook');
-    const inside = document.querySelector('#inside');
+    const s3Havealook = document.querySelector('#s3Havealook');
+    const s3Inside = document.querySelector('#s3Inside');
     const animationOn = 'animation-name: opacity0to1;animation-duration: 1s;animation-timing-function: cubic-bezier(0.59, 0, 0.43, 1);animation-iteration-count: 1; animation-fill-mode: forwards;';
     function checkAndAnimate() {
         const scroll = window.scrollY;
         if (scroll >= 1460) {
-            havealook.style.cssText += animationOn;
-            setTimeout(() => {inside.style.cssText += animationOn}, 500)
+            s3Havealook.style.cssText += animationOn;
+            setTimeout(() => {s3Inside.style.cssText += animationOn}, 500)
             clearInterval(s3Caption);
         }
     }
@@ -281,6 +280,15 @@ pageIsLoaded = setTimeout(function s1Animate() {
                     break;
             }
         }
+    }
+} ());
+
+(function footerTothetopAnimate() {
+    const fB5Tothetop = document.querySelector('#fB5Tothetop');
+    fB5Tothetop.addEventListener('click', tothetop);
+
+    function tothetop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
     }
 } ());
 

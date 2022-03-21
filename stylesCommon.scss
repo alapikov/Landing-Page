@@ -1,0 +1,103 @@
+// cancelling default styles
+
+p {
+    margin: 0;
+}
+
+span {
+    display: inline-block;
+}
+
+#body {
+    background-color: #fff;
+    margin: 0;
+}
+
+// fonts, mixins, global vars
+
+@font-face {
+    src: url(fonts/avertaRegular.otf);
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: normal;
+} 
+
+@font-face {
+    src: url(fonts/avertaRegularIt.otf);
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    src: url(fonts/avertaSemibold.otf);
+    font-family: 'Averta';
+    font-weight: 500;
+    font-style: normal;
+}  
+
+@font-face {
+    src: url(fonts/avertaLight.otf);
+    font-family: 'Averta';
+    font-weight: 300;
+    font-style: normal;
+}  
+
+@font-face {
+    src: url(fonts/sourcesansRegular.ttf);
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: normal;
+} 
+
+@mixin avertaReg {
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin avertaReg {
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: normal;
+}
+
+@mixin avertaRegIt {
+    font-family: 'Averta';
+    font-weight: 400;
+    font-style: italics;
+}
+
+@mixin avertaSemi {
+    font-family: 'Averta';
+    font-weight: 500;
+    font-style: normal;
+}
+
+@mixin avertaLight {
+    font-family: 'Averta';
+    font-weight: 300;
+    font-style: normal;
+}
+
+@mixin sourcesansReg {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: normal;
+}
+
+$slideHarsh1: cubic-bezier(0.53, 0.02, 0.32, 1);
+$transButton1: cubic-bezier(0.63, 0, 0.34, 1);
+$slideSmooth1: cubic-bezier(0.69, 0, 0.32, 1);
+$slideSmooth2: cubic-bezier(0.26, 0, 0.32, 1);
+$textOrange1: rgb(236, 131, 26);
+$textBlack1: rgb(27, 27, 27);
+$brandGradient1: linear-gradient(90deg, hsl(35, 100%, 61%) 0%, hsl(20, 79%, 54%) 50%, #e12323 100%);
+$brandGradient1rev: linear-gradient(270deg, hsl(35deg 100% 61%) 0%, hsl(20deg 79% 54%) 50%, hsl(0deg 76% 51%) 100%);
+
+@mixin footerDarkenElems {
+    transition-property: filter;
+    transition-duration: 0.8s;
+    transition-timing-function: $slideSmooth2;
+    transition-delay: 0s;
+}
