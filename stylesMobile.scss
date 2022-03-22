@@ -333,13 +333,13 @@
                 align-items: center;
 
                 #s3ImgsLeft {
-                    height: 12vw;
-                    padding-left: 11vw;
+                    height: 10vw;
+                    padding-left: 12vw;
                 }
 
                 #s3ImgsRight {
-                    height: 12vw;
-                    padding-right: 11vw;
+                    height: 10vw;
+                    padding-right: 12vw;
                 }  
             }
         } 
@@ -506,8 +506,6 @@
 
             #s5feedbackWindow {
                 width: 100vw;
-                // height: 115vw;
-                margin-bottom: 40px;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -562,6 +560,10 @@
                     .s5feedbackItem:last-of-type {
                         // padding-left: 40px;
                     }
+
+                    #logoLacoste1 {
+                        margin-left: -20px;
+                    }
                 }
 
                 #s5Buttons {
@@ -569,15 +571,15 @@
                     flex-direction: row;
                     justify-content: center;
                     align-items: center;
-                    margin-bottom: 100px;
+                    margin-bottom: 50px;
         
                     #s5ArrowLeft {
-                        height: 12vw;
+                        height: 10vw;
                         margin-right: 30px;
                     }
         
                     #s5ArrowRight {
-                        height: 12vw;
+                        height: 10vw;
                         margin-left: 30px;
                     }
                 }
@@ -593,9 +595,8 @@
 
             #s5PartnersCaption {
                 @include avertaSemi;
-                font-size: 8vw;
+                font-size: 7vw;
                 color: $textOrange1;
-                margin-bottom: 40px;
             }
 
             #s5PartnersCont {
@@ -607,6 +608,7 @@
                 gap: 50px;
                 overflow-y: hidden;
                 overflow-x: scroll;
+                margin-bottom: 12px;
 
                 img.s5PartnersLogo {
                     width: 140px;

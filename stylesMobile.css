@@ -346,12 +346,12 @@ span {
     align-items: center;
   }
   #screen3 #s3ImgsWindow #s3ImgsArrows #s3ImgsLeft {
-    height: 12vw;
-    padding-left: 11vw;
+    height: 10vw;
+    padding-left: 12vw;
   }
   #screen3 #s3ImgsWindow #s3ImgsArrows #s3ImgsRight {
-    height: 12vw;
-    padding-right: 11vw;
+    height: 10vw;
+    padding-right: 12vw;
   }
   #screen3 #s3Caption2 {
     display: flex;
@@ -512,7 +512,6 @@ span {
   }
   #screen5 #s5feedbackBox #s5feedbackWindow {
     width: 100vw;
-    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -562,19 +561,22 @@ span {
     justify-content: flex-end;
     align-items: center;
   }
+  #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont #logoLacoste1 {
+    margin-left: -20px;
+  }
   #screen5 #s5feedbackBox #s5feedbackWindow #s5Buttons {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
   #screen5 #s5feedbackBox #s5feedbackWindow #s5Buttons #s5ArrowLeft {
-    height: 12vw;
+    height: 10vw;
     margin-right: 30px;
   }
   #screen5 #s5feedbackBox #s5feedbackWindow #s5Buttons #s5ArrowRight {
-    height: 12vw;
+    height: 10vw;
     margin-left: 30px;
   }
   #screen5 #s5PartnersBox {
@@ -588,9 +590,8 @@ span {
     font-family: "Averta";
     font-weight: 500;
     font-style: normal;
-    font-size: 8vw;
+    font-size: 7vw;
     color: #ec831a;
-    margin-bottom: 40px;
   }
   #screen5 #s5PartnersBox #s5PartnersCont {
     width: 100vw;
@@ -601,6 +602,7 @@ span {
     gap: 50px;
     overflow-y: hidden;
     overflow-x: scroll;
+    margin-bottom: 12px;
   }
   #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo {
     width: 140px;
