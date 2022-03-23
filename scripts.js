@@ -1,42 +1,13 @@
-pageIsLoaded = window.onload
+pageIsLoaded = window.onload;
 
-// not ultra-wide screens (16:9 to 17.5:9) optimizations
-
-const screenRatio = (document.documentElement.clientHeight  / document.documentElement.clientWidth).toFixed(3);
-
-console.log ('screenRatio is: ' + screenRatio);
-
-(function adaptHeader() {
-    if (screenRatio <= 1.945) {
-        const header = document.querySelector('#header');
-        header.style.height = '46px';
-        const headerLogo = document.querySelector('#headerLogo');
-        headerLogo.style.width = '86px';
-        const headerMenuIcon = document.querySelector('#headerMenuIcon');
-        headerMenuIcon.style.width = '28px';
-        headerMenuIcon.style.marginTop = '9px';
+(function loadScriptsMobile() {
+    if (document.documentElement.clientWidth <= 490) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'scriptsMobile.js';
+        document.head.appendChild(script);
     }
 } ());
-
-(function adaptS2ContSize() {
-    if (screenRatio <= 1.945) {
-        const s2FeaturesWindow = document.querySelector('#s2FeaturesWindow');
-        s2FeaturesWindow.style.marginBottom = '20px';
-        const s2FeatureImg_s = document.querySelectorAll('.s2FeatureImg');
-        s2FeatureImg_s.forEach(img => {
-            img.style.marginBottom = '-2px';
-        })
-    }
-} ());
-
-(function adaptS3Caption() {
-    if (screenRatio <= 1.945) {
-        const s3Caption = document.querySelector('#s3Caption');
-        s3Caption.style.marginBottom = '20px'; 
-    }
-} ());
-
-
 
 // animations on scroll / on pageload
 
@@ -277,6 +248,81 @@ pageIsLoaded = setTimeout(function s1Animate() {
                     break;
                 case 14:
                     s3ImgsCont.style.transform = 'translateX(-85.358%)';
+                    break;
+            }
+        }
+    }
+} ());
+
+(function s5FeedbackAnimate() {
+    const s5feedbackCont = document.querySelector('#s5feedbackCont');
+    const s5ArrowRight = document.querySelector('#s5ArrowRight');
+    const s5ArrowLeft = document.querySelector('#s5ArrowLeft');
+    let shiftIndex = 0;
+    
+    function incrShiftIndex() {
+        if (shiftIndex < 6) {
+            shiftContainer('shiftRight');
+            shiftIndex++;
+        }
+    }
+    function decrShiftIndex() {
+        if (shiftIndex > 0) {
+            shiftContainer('shiftLeft');
+            shiftIndex--;
+        }   
+    }
+    s5ArrowLeft.addEventListener('click', decrShiftIndex);
+    s5ArrowRight.addEventListener('click', incrShiftIndex);
+
+    function shiftContainer(shiftProp) {  
+        if (shiftProp === 'shiftRight') {
+            switch (shiftIndex) {
+                case 6:
+                    break;
+
+                case 0:
+                    s5feedbackCont.style.transform = 'translateX(-14%)';
+                    break;
+                case 1: 
+                    s5feedbackCont.style.transform = 'translateX(-28%)';
+                    break;
+                case 2:
+                    s5feedbackCont.style.transform = 'translateX(-42%)';
+                    break;
+                case 3: 
+                    s5feedbackCont.style.transform = 'translateX(-56%)';
+                    break;
+                case 4:
+                    s5feedbackCont.style.transform = 'translateX(-70%)';
+                    break;
+                case 5: 
+                    s5feedbackCont.style.transform = 'translateX(-86%)';
+                    break;
+            }
+        }
+        if (shiftProp === 'shiftLeft') {
+            switch (shiftIndex) {
+                case 0:
+                    break;
+                
+                case 1:
+                    s5feedbackCont.style.transform = 'translateX(0%)';
+                    break; 
+                case 2:
+                    s5feedbackCont.style.transform = 'translateX(-14%)';
+                    break;
+                case 3:
+                    s5feedbackCont.style.transform = 'translateX(-28%)';
+                    break; 
+                case 4:
+                    s5feedbackCont.style.transform = 'translateX(-42%)';
+                    break;
+                case 5:
+                    s5feedbackCont.style.transform = 'translateX(-56%)';
+                    break; 
+                case 6:
+                    s5feedbackCont.style.transform = 'translateX(-70%)';
                     break;
             }
         }

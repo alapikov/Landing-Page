@@ -26,7 +26,7 @@
 
 // styles beginning
 
-@media (max-width: 490px) {
+// @media (max-width: 490px) {
     html {
         font-size: 32px;
     }
@@ -241,12 +241,12 @@
             margin-bottom:80px;
 
             #s2ArrowLeft {
-                height: 10vw;
+                height: 9vw;
                 margin-right: 30px;
             }
 
             #s2ArrowRight {
-                height: 10vw;
+                height: 9vw;
                 margin-left: 30px;
             }
         }
@@ -507,18 +507,18 @@
             #s5feedbackWindow {
                 width: 100vw;
                 display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: center;
+                // flex-direction: column;
+                // justify-content: flex-start;
+                // align-items: center;
                 overflow: hidden;
     
                 #s5feedbackCont {
                     height: 330px;
                     display: flex;
-                    flex-direction: row;
-                    justify-content: flex-start;
-                    align-items: center;
-                    grid-gap: 30px;
+                    // flex-direction: row;
+                    // justify-content: flex-start;
+                    // align-items: center;
+                    grid-gap: 50px;
                     transition: all 0.6s $slideSmooth1;
                     margin-bottom: 30px;
     
@@ -554,34 +554,30 @@
                     }
                     
                     .s5feedbackItem:first-of-type {
-                        // padding-left: 40px;
+                        margin-left: 48px;
                     }
 
                     .s5feedbackItem:last-of-type {
-                        // padding-left: 40px;
-                    }
-
-                    #logoLacoste1 {
-                        margin-left: -20px;
+                        margin-left: 48px;
                     }
                 }
+            }
 
-                #s5Buttons {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
-                    align-items: center;
-                    margin-bottom: 50px;
-        
-                    #s5ArrowLeft {
-                        height: 10vw;
-                        margin-right: 30px;
-                    }
-        
-                    #s5ArrowRight {
-                        height: 10vw;
-                        margin-left: 30px;
-                    }
+            #s5Buttons {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 50px;
+    
+                #s5ArrowLeft {
+                    height: 9vw;
+                    margin-right: 30px;
+                }
+    
+                #s5ArrowRight {
+                    height: 9vw;
+                    margin-left: 30px;
                 }
             }
         }
@@ -620,6 +616,14 @@
 
                 img.s5PartnersLogo:last-of-type {
                     margin-right: 80px;
+                }
+
+                #logoLacoste1 {
+                    width: 128px !important;
+                }
+
+                #logoHuawei1 {
+                    width: 84px !important;
                 }
 
             }
@@ -756,4 +760,4 @@
             }
         }
     }
-}
+// }
