@@ -1,5 +1,33 @@
 @import 'stylesCommon.scss';
 
+$fontsizeCaption1: 38px;
+$fontsizeCaption2: 32px;
+$fontsizeTextOrdinary1: 26px;
+
+// components
+
+.buttonOrange1 {
+    border: 2px solid $textOrange1;
+    border-radius: 20px;
+        color: $textOrange1;
+        background-color: #fff;
+    @include avertaReg;
+    font-size: 32px;
+    transition-property: color, background-color;
+    transition-duration: 0.7s;
+    transition-timing-function: $slideHarsh1;
+    transition-delay: 0s;
+}
+
+    .buttonOrange1:hover {
+        background-color: $textOrange1;
+        color: #fff;
+        transition-property: color, background-color;
+        transition-duration: 0.7s;
+        transition-timing-function: $slideHarsh1;
+        transition-delay: 0s;
+    }
+
 // styles beginning
 
 html {
@@ -12,7 +40,7 @@ html {
 
 #header {
     width: 100vw;
-    height: 6.2vh;
+    height: 5.2vh;
     position: fixed;
     z-index: 10;
     display: flex;
@@ -26,16 +54,16 @@ html {
     }
 
     #headerLogo {
-        width: 100px;
+        width: 9.2vh;
         margin-top: 8px;
-        margin-left: 10px;
+        margin-left: 9vw;
     }
 
     #headerMenuIconCont {
-        margin-right: 24px;
+        margin-right: 22px;
 
         #headerMenuIcon {
-            width: 32px;
+            width: 3vh;
             margin-top: 7px;
         }
     }   
@@ -79,8 +107,8 @@ html {
     }
 
     #s1CaptionTop {
-        font-size: 14vw;
-        line-height: 15vw;
+        font-size: 76px;
+        line-height: 84px;
         color: #fff;
         text-align: center;
         @include avertaSemi;
@@ -100,7 +128,7 @@ html {
     }
 
     #s1CaptionSub {
-        font-size: 7.5vw;
+        font-size: 42px;
         color: #fff;
         text-align: center;
         @include avertaLight;
@@ -113,9 +141,9 @@ html {
 
     #s1Arrow {
         position: relative;
-        width: 16vw;
-        margin-top: 27vh;
-        margin-bottom: 4vh;
+        width: 72px;
+        margin-top: 32vh;
+        margin-bottom: 2vh;
         animation-name: s1Arrow;
         animation-duration: 1.2s;
         animation-timing-function: $slideHarsh1;
@@ -138,9 +166,10 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 10px;
 
         #s2Thepowerof {
-            font-size: 7vw;
+            font-size: $fontsizeCaption1;
             text-align: center;
             @include avertaReg;
             color: $textOrange1;
@@ -148,18 +177,18 @@ html {
         }
 
         #s2Logo {
-            width: 40vw;
+            width: 222px;
             opacity: 0;
             // js function s1Animate() after onload
         }
     }
 
     #s2FeaturesWindow {
-        width: 86%;
+        width: 100vw;
         display: flex;
         grid-gap: 80px;
         margin-top: 40px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         overflow: hidden;
 
         #s2FeaturesCont {
@@ -169,7 +198,9 @@ html {
             // align-items: center;
             grid-gap: 80px;
             transition: all 0.7s $slideSmooth1;
-            // overflow: hidden;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            padding-bottom: 50px;
 
             .s2FeatureBlock {
                 display: flex;
@@ -180,61 +211,66 @@ html {
                 // last .s2FeatureBlock has m-right: 0px, style below
 
                 img.s2FeatureImg {
-                    width: 38vw;
-                    margin-bottom: 8px;
+                    width: 172px;
+                    // margin-bottom: 8px;
                 }
 
                 .s2FeatureCaption {
-                    font-size: 10vw;
+                    font-size: 52px;
                     color: $textOrange1;
                     text-align: center;
                     @include avertaSemi;
+                    margin-top: -8px;
                     margin-bottom: 8px;
                 }
 
                 .s2CaptionAnno {
-                    width: 86vw;
-                    font-size: 5.3vw;
+                    width: 420px;
+                    font-size: $fontsizeTextOrdinary1;
                     color: $textBlack1;
                     text-align: center;
                     @include sourcesansReg; 
                 }
             }
 
-            // .s2FeatureBlock:last-of-type {
-            //     margin-right: 0px;
-            // }
+            .s2FeatureBlock:first-child {
+                margin-left: 100px;
+            }
+
+            .s2FeatureBlock:last-child {
+                margin-right: 100px;
+            }
         }
 
     }
 
     #s2Buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        margin-bottom:80px;
+        display: none;
+        // flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+        // margin-bottom:80px;
 
-        #s2ArrowLeft {
-            height: 9vw;
-            margin-right: 30px;
-        }
+        // #s2ArrowLeft {
+        //     height: 9vw;
+        //     margin-right: 30px;
+        // }
 
-        #s2ArrowRight {
-            height: 9vw;
-            margin-left: 30px;
-        }
+        // #s2ArrowRight {
+        //     height: 9vw;
+        //     margin-left: 30px;
+        // }
     }
 
     #s2Button {
-        width: 56vw;
-        height: 64px;
+        width: 306px;
+        height: 72px;
         margin-bottom: 80px;
         border-radius: 40px;
         background: $brandGradient1rev;
         text-align: center;
-        line-height: 60px;
-        font-size: 7vw;
+        line-height: 64px;
+        font-size: $fontsizeCaption1;
         @include avertaReg;
         color: #fff;
     }
@@ -254,9 +290,9 @@ html {
         justify-content: flex-start;
         align-items: center;
         margin-top: 40px;
-        margin-bottom: 40px;
+        margin-bottom: 10px;
         @include avertaReg;
-        font-size: 7vw;
+        font-size: $fontsizeCaption1;
         color: #fff;
 
         #s3Havealook {
@@ -270,8 +306,8 @@ html {
 
     #s3ImgsWindow {
         width: 100vw;
-        height: 115vw;
-        margin-bottom: 40px;
+        height: 700px;
+        margin-bottom: 10px;
         display: flex;
         overflow: hidden;
 
@@ -280,42 +316,47 @@ html {
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            grid-gap: 30px;
+            grid-gap: 60px;
             transition: all 0.6s $slideSmooth1;
+            overflow-y: hidden;
+            overflow-x: scroll;
  
             img.s3Img {
-                width: 73vw;
-                height: 115vw;
+                width: 480px;
+                height: 620px;
                 object-fit: cover;
             }
  
             img.s3Img:first-of-type {
-                padding-left: 13.5vw;
+                padding-left: 60px;
             }
  
             img.s3Img:last-of-type {
-                padding-right: 13.5vw;
+                padding-right: 60px;
             }
         }
 
         #s3ImgsArrows {
-            position: absolute;
-            height: 115vw;
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
+            display: none;
+        //     position: absolute;
+        //     height: 115vw;
+        //     width: 100%;
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-between;
+        //     align-items: center;
 
-            #s3ImgsLeft {
-                height: 10vw;
-                padding-left: 12vw;
-            }
+        //     #s3ImgsLeft {
+        //         display: none;
+        //         height: 10vw;
+        //         padding-left: 12vw;
+        //     }
 
-            #s3ImgsRight {
-                height: 10vw;
-                padding-right: 12vw;
-            }  
+        //     #s3ImgsRight {
+        //         display: none;
+        //         height: 10vw;
+        //         padding-right: 12vw;
+        //     }  
         }
     } 
 
@@ -326,7 +367,7 @@ html {
         align-items: center;
         margin-bottom: 50px;
         @include avertaReg;
-        font-size: 7vw;
+        font-size: $fontsizeCaption1;
         color: #fff;
 
         #andgetdeeper {
@@ -349,8 +390,7 @@ html {
         margin-bottom: 60px;
 
         #s3vtStatus {
-            width: 8%;
-           
+            width: 40px;
         }
     }
 }
@@ -369,9 +409,9 @@ html {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 40px;
+        margin-bottom: 60px;
         @include avertaReg;
-        font-size: 7vw;
+        font-size: $fontsizeCaption1;
         color: #fff;
     }
 
@@ -380,34 +420,35 @@ html {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 85vw;
+        width: 520px;
 
         .s4personImg {
-            width: 58vw;
+            width: 360px;
             border-radius: 60px;
-            margin-bottom: 6px;
+            margin-bottom: 12px;
         }
 
         .s4personName {
             @include avertaSemi;
             color: #fff;
-            font-size: 8vw;
-            margin-bottom: -2px;
+            font-size: $fontsizeCaption1;
+            // margin-bottom: -2px;
         }
 
         .s4personPosition {
             @include avertaLight;
             color: #fff;
-            font-size: 6.3vw;
+            font-size: $fontsizeCaption2;
             margin-bottom: 8px;
+            margin-top: -4px;
         }
 
         .s4personText {
             @include sourcesansReg;
             text-align: center;
             color: #fff;
-            font-size: 5.3vw;
-            margin-bottom: 40px;
+            font-size: $fontsizeTextOrdinary1;
+            margin-bottom: 56px;
         }
     }
 }
@@ -431,14 +472,14 @@ html {
         #s5Caption {
             text-align: center;
             @include sourcesansReg;
-            font-size: 5.3vw;
+            font-size: $fontsizeCaption2;
             color: $textOrange1;
             margin-bottom: 20px;
         }
 
         #s5buttonDesktop {
-            width: 34vw;
-            height: 52px;
+            width: 220px;
+            height: 62px;
         }
     }
 
@@ -454,14 +495,14 @@ html {
         #s5Caption2 {
             text-align: center;
             @include sourcesansReg;
-            font-size: 5.3vw;
+            font-size: 32px;
             color: $textOrange1;
             margin-bottom: 30px;
         }
 
         #s5buttonMobile {
-            width: 34vw;
-            height: 52px;
+            width: 220px;
+            height: 62px;
         }
     }
 
@@ -475,8 +516,8 @@ html {
         #s5Caption3 {
             text-align: center;
             @include avertaReg;
-            font-size: 7vw;
-            margin-bottom: 30px;
+            font-size: 40px;
+            margin-bottom: 44px;
         }
 
         #s5feedbackWindow {
@@ -485,7 +526,7 @@ html {
             // flex-direction: column;
             // justify-content: flex-start;
             // align-items: center;
-            overflow: hidden;
+            // overflow: hidden;
 
             #s5feedbackCont {
                 height: 330px;
@@ -493,12 +534,14 @@ html {
                 // flex-direction: row;
                 // justify-content: flex-start;
                 // align-items: center;
-                grid-gap: 50px;
+                grid-gap: 80px;
                 transition: all 0.6s $slideSmooth1;
-                margin-bottom: 30px;
+                margin-bottom: 44px;
+                // overflow-y: hidden;
+                overflow-x: scroll;
 
                 .s5feedbackItem {
-                    width: 80vw;
+                    width: 400px;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -506,20 +549,20 @@ html {
 
                     .s5feedbackName {
                         @include avertaLight;
-                        font-size: 6.5vw;
+                        font-size: 30px;
                         color: $textOrange1;
                         margin-bottom: 6px;
                     }
 
                     .s5feedbackText {
                         @include sourcesansReg;
-                        font-size: 5vw;
+                        font-size: $fontsizeTextOrdinary1;
                         margin-bottom: 8px;
                     }
                     
                     .s5feedbackCompany {
                         @include avertaLight;
-                        font-size: 6vw;
+                        font-size: 30px;
                         color: orange;
                         display: flex;
                         flex-direction: row;
@@ -529,17 +572,17 @@ html {
                 }
                 
                 .s5feedbackItem:first-of-type {
-                    margin-left: 48px;
+                    margin-left: 140px;
                 }
 
                 .s5feedbackItem:last-of-type {
-                    margin-left: 48px;
+                    margin-left: 140px;
                 }
             }
         }
 
         #s5Buttons {
-            display: flex;
+            display: none;
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -566,7 +609,7 @@ html {
 
         #s5PartnersCaption {
             @include avertaSemi;
-            font-size: 7vw;
+            font-size: $fontsizeCaption1;
             color: $textOrange1;
         }
 
@@ -576,13 +619,13 @@ html {
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            gap: 50px;
+            gap: 74px;
             overflow-y: hidden;
             overflow-x: scroll;
-            margin-bottom: 12px;
+            margin-bottom: 32px;
 
             img.s5PartnersLogo {
-                width: 140px;
+                width: 160px;
             }
 
             img.s5PartnersLogo:first-of-type {
@@ -594,11 +637,11 @@ html {
             }
 
             #logoLacoste1 {
-                width: 128px !important;
+                width: 142px !important;
             }
 
             #logoHuawei1 {
-                width: 84px !important;
+                width: 90px !important;
             }
 
         }
@@ -615,7 +658,7 @@ footer {
 
 
     #fBlock1 {
-        width: 66vw;
+        width: 44vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -625,7 +668,7 @@ footer {
 
         #fB1Slogan {
             @include sourcesansReg;
-            font-size: 5.3vw;
+            font-size: 26px;
             color: white;
             line-height: 22px;
             @include footerDarkenElems
@@ -637,7 +680,7 @@ footer {
             }
         
         #fB1Logo {
-            width: 100px;
+            width: 10vh;
             padding-top: 4px;
             @include footerDarkenElems
         }
@@ -658,7 +701,7 @@ footer {
 
         #fB2Email {
             @include avertaLight;
-            font-size: 5vw;
+            font-size: 28px;
             color: white;
             margin-bottom: 6px;
             @include footerDarkenElems
@@ -671,7 +714,7 @@ footer {
 
         #fB2phone {
             @include avertaLight;
-            font-size: 5vw;
+            font-size: 28px;
             color: white;
             @include footerDarkenElems
         }
@@ -692,7 +735,7 @@ footer {
 
         #fB3Address {
             @include avertaSemi;
-            font-size: 5vw;
+            font-size: 28px;
             color: white;
             text-align: center;
             @include footerDarkenElems
@@ -704,7 +747,7 @@ footer {
             }
     }
     #fBlock4 {
-        width: 56vw;
+        width: 34vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -728,7 +771,7 @@ footer {
         
         #fB5Tothetop {
             @include sourcesansReg;
-            font-size: 5.3vw;
+            font-size: 28px;
             color: #fff;
             text-align: center;
             @include footerDarkenElems

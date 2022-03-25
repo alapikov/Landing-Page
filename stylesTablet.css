@@ -41,6 +41,30 @@ span {
   font-weight: 400;
   font-style: normal;
 }
+.buttonOrange1 {
+  border: 2px solid #ec831a;
+  border-radius: 20px;
+  color: #ec831a;
+  background-color: #fff;
+  font-family: "Averta";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 32px;
+  transition-property: color, background-color;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.53, 0.02, 0.32, 1);
+  transition-delay: 0s;
+}
+
+.buttonOrange1:hover {
+  background-color: #ec831a;
+  color: #fff;
+  transition-property: color, background-color;
+  transition-duration: 0.7s;
+  transition-timing-function: cubic-bezier(0.53, 0.02, 0.32, 1);
+  transition-delay: 0s;
+}
+
 html {
   font-size: 32px;
 }
@@ -51,7 +75,7 @@ html {
 
 #header {
   width: 100vw;
-  height: 6.2vh;
+  height: 5.2vh;
   position: fixed;
   z-index: 10;
   display: flex;
@@ -64,15 +88,15 @@ html {
   margin-left: 50px;
 }
 #header #headerLogo {
-  width: 100px;
+  width: 9.2vh;
   margin-top: 8px;
-  margin-left: 10px;
+  margin-left: 9vw;
 }
 #header #headerMenuIconCont {
-  margin-right: 24px;
+  margin-right: 22px;
 }
 #header #headerMenuIconCont #headerMenuIcon {
-  width: 32px;
+  width: 3vh;
   margin-top: 7px;
 }
 
@@ -122,8 +146,8 @@ html {
   width: 80%;
 }
 #screen1 #s1CaptionTop {
-  font-size: 14vw;
-  line-height: 15vw;
+  font-size: 76px;
+  line-height: 84px;
   color: #fff;
   text-align: center;
   font-family: "Averta";
@@ -139,7 +163,7 @@ html {
   left: 100vw;
 }
 #screen1 #s1CaptionSub {
-  font-size: 7.5vw;
+  font-size: 42px;
   color: #fff;
   text-align: center;
   font-family: "Averta";
@@ -151,9 +175,9 @@ html {
 }
 #screen1 #s1Arrow {
   position: relative;
-  width: 16vw;
-  margin-top: 27vh;
-  margin-bottom: 4vh;
+  width: 72px;
+  margin-top: 32vh;
+  margin-bottom: 2vh;
   animation-name: s1Arrow;
   animation-duration: 1.2s;
   animation-timing-function: cubic-bezier(0.53, 0.02, 0.32, 1);
@@ -173,9 +197,10 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 10px;
 }
 #screen2 #s2Caption #s2Thepowerof {
-  font-size: 7vw;
+  font-size: 38px;
   text-align: center;
   font-family: "Averta";
   font-weight: 400;
@@ -184,21 +209,24 @@ html {
   margin-bottom: 14px;
 }
 #screen2 #s2Caption #s2Logo {
-  width: 40vw;
+  width: 222px;
   opacity: 0;
 }
 #screen2 #s2FeaturesWindow {
-  width: 86%;
+  width: 100vw;
   display: flex;
   grid-gap: 80px;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   overflow: hidden;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont {
   display: flex;
   grid-gap: 80px;
   transition: all 0.7s cubic-bezier(0.69, 0, 0.32, 1);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding-bottom: 50px;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock {
   display: flex;
@@ -207,51 +235,45 @@ html {
   align-items: center;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock img.s2FeatureImg {
-  width: 38vw;
-  margin-bottom: 8px;
+  width: 172px;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2FeatureCaption {
-  font-size: 10vw;
+  font-size: 52px;
   color: #ec831a;
   text-align: center;
   font-family: "Averta";
   font-weight: 500;
   font-style: normal;
+  margin-top: -8px;
   margin-bottom: 8px;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2CaptionAnno {
-  width: 86vw;
-  font-size: 5.3vw;
+  width: 420px;
+  font-size: 26px;
   color: #1b1b1b;
   text-align: center;
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
 }
+#screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock:first-child {
+  margin-left: 100px;
+}
+#screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock:last-child {
+  margin-right: 100px;
+}
 #screen2 #s2Buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 80px;
-}
-#screen2 #s2Buttons #s2ArrowLeft {
-  height: 9vw;
-  margin-right: 30px;
-}
-#screen2 #s2Buttons #s2ArrowRight {
-  height: 9vw;
-  margin-left: 30px;
+  display: none;
 }
 #screen2 #s2Button {
-  width: 56vw;
-  height: 64px;
+  width: 306px;
+  height: 72px;
   margin-bottom: 80px;
   border-radius: 40px;
   background: linear-gradient(270deg, #ffac38 0%, #e66b2d 50%, #e12323 100%);
   text-align: center;
-  line-height: 60px;
-  font-size: 7vw;
+  line-height: 64px;
+  font-size: 38px;
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
@@ -272,11 +294,11 @@ html {
   justify-content: flex-start;
   align-items: center;
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
-  font-size: 7vw;
+  font-size: 38px;
   color: #fff;
 }
 #screen3 #s3Caption #s3Havealook {
@@ -287,8 +309,8 @@ html {
 }
 #screen3 #s3ImgsWindow {
   width: 100vw;
-  height: 115vw;
-  margin-bottom: 40px;
+  height: 700px;
+  margin-bottom: 10px;
   display: flex;
   overflow: hidden;
 }
@@ -297,36 +319,24 @@ html {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  grid-gap: 30px;
+  grid-gap: 60px;
   transition: all 0.6s cubic-bezier(0.69, 0, 0.32, 1);
+  overflow-y: hidden;
+  overflow-x: scroll;
 }
 #screen3 #s3ImgsWindow #s3ImgsCont img.s3Img {
-  width: 73vw;
-  height: 115vw;
+  width: 480px;
+  height: 620px;
   object-fit: cover;
 }
 #screen3 #s3ImgsWindow #s3ImgsCont img.s3Img:first-of-type {
-  padding-left: 13.5vw;
+  padding-left: 60px;
 }
 #screen3 #s3ImgsWindow #s3ImgsCont img.s3Img:last-of-type {
-  padding-right: 13.5vw;
+  padding-right: 60px;
 }
 #screen3 #s3ImgsWindow #s3ImgsArrows {
-  position: absolute;
-  height: 115vw;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#screen3 #s3ImgsWindow #s3ImgsArrows #s3ImgsLeft {
-  height: 10vw;
-  padding-left: 12vw;
-}
-#screen3 #s3ImgsWindow #s3ImgsArrows #s3ImgsRight {
-  height: 10vw;
-  padding-right: 12vw;
+  display: none;
 }
 #screen3 #s3Caption2 {
   display: flex;
@@ -337,7 +347,7 @@ html {
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
-  font-size: 7vw;
+  font-size: 38px;
   color: #fff;
 }
 #screen3 #s3Caption2 #andgetdeeper {
@@ -357,7 +367,7 @@ html {
   margin-bottom: 60px;
 }
 #screen3 #s3virtualTour #s3vtStatus {
-  width: 8%;
+  width: 40px;
 }
 
 #screen4 {
@@ -374,11 +384,11 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
-  font-size: 7vw;
+  font-size: 38px;
   color: #fff;
 }
 #screen4 .s4personBox {
@@ -386,28 +396,28 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 85vw;
+  width: 520px;
 }
 #screen4 .s4personBox .s4personImg {
-  width: 58vw;
+  width: 360px;
   border-radius: 60px;
-  margin-bottom: 6px;
+  margin-bottom: 12px;
 }
 #screen4 .s4personBox .s4personName {
   font-family: "Averta";
   font-weight: 500;
   font-style: normal;
   color: #fff;
-  font-size: 8vw;
-  margin-bottom: -2px;
+  font-size: 38px;
 }
 #screen4 .s4personBox .s4personPosition {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
   color: #fff;
-  font-size: 6.3vw;
+  font-size: 32px;
   margin-bottom: 8px;
+  margin-top: -4px;
 }
 #screen4 .s4personBox .s4personText {
   font-family: "Source Sans Pro";
@@ -415,8 +425,8 @@ html {
   font-style: normal;
   text-align: center;
   color: #fff;
-  font-size: 5.3vw;
-  margin-bottom: 40px;
+  font-size: 26px;
+  margin-bottom: 56px;
 }
 
 #screen5 {
@@ -440,13 +450,13 @@ html {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 5.3vw;
+  font-size: 32px;
   color: #ec831a;
   margin-bottom: 20px;
 }
 #screen5 #desktopappBox #s5buttonDesktop {
-  width: 34vw;
-  height: 52px;
+  width: 220px;
+  height: 62px;
 }
 #screen5 #mobileappBox {
   width: 85vw;
@@ -462,13 +472,13 @@ html {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 5.3vw;
+  font-size: 32px;
   color: #ec831a;
   margin-bottom: 30px;
 }
 #screen5 #mobileappBox #s5buttonMobile {
-  width: 34vw;
-  height: 52px;
+  width: 220px;
+  height: 62px;
 }
 #screen5 #s5feedbackBox {
   width: 100vw;
@@ -482,23 +492,23 @@ html {
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
-  font-size: 7vw;
-  margin-bottom: 30px;
+  font-size: 40px;
+  margin-bottom: 44px;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow {
   width: 100vw;
   display: flex;
-  overflow: hidden;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont {
   height: 330px;
   display: flex;
-  grid-gap: 50px;
+  grid-gap: 80px;
   transition: all 0.6s cubic-bezier(0.69, 0, 0.32, 1);
-  margin-bottom: 30px;
+  margin-bottom: 44px;
+  overflow-x: scroll;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont .s5feedbackItem {
-  width: 80vw;
+  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -508,7 +518,7 @@ html {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 6.5vw;
+  font-size: 30px;
   color: #ec831a;
   margin-bottom: 6px;
 }
@@ -516,14 +526,14 @@ html {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 26px;
   margin-bottom: 8px;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont .s5feedbackItem .s5feedbackCompany {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 6vw;
+  font-size: 30px;
   color: orange;
   display: flex;
   flex-direction: row;
@@ -531,13 +541,13 @@ html {
   align-items: center;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont .s5feedbackItem:first-of-type {
-  margin-left: 48px;
+  margin-left: 140px;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont .s5feedbackItem:last-of-type {
-  margin-left: 48px;
+  margin-left: 140px;
 }
 #screen5 #s5feedbackBox #s5Buttons {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -562,7 +572,7 @@ html {
   font-family: "Averta";
   font-weight: 500;
   font-style: normal;
-  font-size: 7vw;
+  font-size: 38px;
   color: #ec831a;
 }
 #screen5 #s5PartnersBox #s5PartnersCont {
@@ -571,13 +581,13 @@ html {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 50px;
+  gap: 74px;
   overflow-y: hidden;
   overflow-x: scroll;
-  margin-bottom: 12px;
+  margin-bottom: 32px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo {
-  width: 140px;
+  width: 160px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo:first-of-type {
   margin-left: 80px;
@@ -586,10 +596,10 @@ html {
   margin-right: 80px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont #logoLacoste1 {
-  width: 128px !important;
+  width: 142px !important;
 }
 #screen5 #s5PartnersBox #s5PartnersCont #logoHuawei1 {
-  width: 84px !important;
+  width: 90px !important;
 }
 
 footer {
@@ -601,7 +611,7 @@ footer {
   align-items: center;
 }
 footer #fBlock1 {
-  width: 66vw;
+  width: 44vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -613,7 +623,7 @@ footer #fBlock1 #fB1Slogan {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 5.3vw;
+  font-size: 26px;
   color: white;
   line-height: 22px;
   transition-property: filter;
@@ -629,7 +639,7 @@ footer #fBlock1 #fB1Slogan:hover {
   transition-delay: 0s;
 }
 footer #fBlock1 #fB1Logo {
-  width: 100px;
+  width: 10vh;
   padding-top: 4px;
   transition-property: filter;
   transition-duration: 0.8s;
@@ -655,7 +665,7 @@ footer #fBlock2 #fB2Email {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 28px;
   color: white;
   margin-bottom: 6px;
   transition-property: filter;
@@ -674,7 +684,7 @@ footer #fBlock2 #fB2phone {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 28px;
   color: white;
   transition-property: filter;
   transition-duration: 0.8s;
@@ -700,7 +710,7 @@ footer #fBlock3 #fB3Address {
   font-family: "Averta";
   font-weight: 500;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 28px;
   color: white;
   text-align: center;
   transition-property: filter;
@@ -716,7 +726,7 @@ footer #fBlock3 #fB3Address:hover {
   transition-delay: 0s;
 }
 footer #fBlock4 {
-  width: 56vw;
+  width: 34vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -745,7 +755,7 @@ footer #fBlock5 #fB5Tothetop {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 5.3vw;
+  font-size: 28px;
   color: #fff;
   text-align: center;
   transition-property: filter;

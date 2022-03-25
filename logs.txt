@@ -2,6 +2,12 @@ sass --watch stylesCommon.scss stylesCommon.css
 sass --watch stylesMobile.scss stylesMobile.css
 sass --watch stylesTablet.scss stylesTablet.css
 
+------------ remarks:
+- 
+
+------------ styles rules:
+- big caption size: mobile - 7vw, tablet - 40px
+
 ------------ code style rules:
 - const name in JS always equals its HTML id, e.g. const headerMenuIcon = document.querySelector('#headerMenuIcon');
 - screen width border for mobiles #1 - 86vw;
@@ -37,3 +43,6 @@ sass --watch stylesTablet.scss stylesTablet.css
 - adjust all styles, fonts, animations
 - correct variables names that are not in camel case
 - refactor functions that slide images, feedback etc., get rid of switch construction
+- add title screen ambient effects
+- design header pop-up menu
+- refactor everything
