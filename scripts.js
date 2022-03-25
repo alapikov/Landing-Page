@@ -9,6 +9,15 @@ pageIsLoaded = window.onload;
     }
 } ());
 
+(function loadScriptsTablet() {
+    if (document.documentElement.clientWidth >= 491) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'scriptsTablet.js';
+        document.head.appendChild(script);
+    }
+} ());
+
 // animations on scroll / on pageload
 
 pageIsLoaded = setTimeout(function s1Animate() {
@@ -69,68 +78,6 @@ pageIsLoaded = setTimeout(function s1Animate() {
 
 // other animations
 
-(function s2FeaturesAnimate() {
-    const s2FeaturesCont = document.querySelector('#s2FeaturesCont');
-    const s2ArrowLeft = document.querySelector('#s2ArrowLeft');
-    const s2ArrowRight = document.querySelector('#s2ArrowRight');
-    let shiftIndex = 0;
-    
-    function incrShiftIndex() {
-        if (shiftIndex < 4) {
-            shiftContainer('shiftRight');
-            shiftIndex++;
-        }
-    }
-    
-    function decrShiftIndex() {
-        if (shiftIndex > 0) {
-            shiftContainer('shiftLeft');
-            shiftIndex--;
-        }
-        
-    }
-    s2ArrowRight.addEventListener("click", incrShiftIndex);
-    s2ArrowLeft.addEventListener("click", decrShiftIndex);
-    
-    function shiftContainer(shiftProp) {
-        if (shiftProp === 'shiftRight') {
-            switch (shiftIndex) {
-                case 4:
-                    break;
-                case 0:
-                    s2FeaturesCont.style.transform = 'translateX(-20.8%)';
-                    break;
-                case 1:
-                    s2FeaturesCont.style.transform = 'translateX(-41.6%)';
-                    break;
-                case 2:
-                    s2FeaturesCont.style.transform = 'translateX(-62.4%)';
-                    break;
-                case 3:
-                    s2FeaturesCont.style.transform = 'translateX(-83.2%)';
-                    break;
-            }
-        }
-        if (shiftProp === 'shiftLeft') {
-            switch (shiftIndex) {
-                case 0:
-                    break;
-                case 4:
-                    s2FeaturesCont.style.transform = 'translateX(-62.4%)';
-                    break;
-                case 3:
-                    s2FeaturesCont.style.transform = 'translateX(-41.6%)';
-                    break;
-                case 2:
-                    s2FeaturesCont.style.transform = 'translateX(-20.8%)';
-                    break;
-                case 1:
-                    s2FeaturesCont.style.transform = 'translateX(0%)';
-                    break;
-            }
-        }
-    }    
-} ());
 
 (function s3ImgsAnimate() {
     const s3ImgsCont = document.querySelector('#s3ImgsCont');
