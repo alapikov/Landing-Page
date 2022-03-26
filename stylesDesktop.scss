@@ -1,0 +1,782 @@
+@import 'stylesCommon.scss';
+
+$fontsizeCaption1: 28px;
+$fontsizeCaption2: 24px;
+$fontsizeTextOrdinary1: 18px;
+
+// components
+
+.buttonOrange1 {
+    border: 2px solid $textOrange1;
+    border-radius: 20px;
+        color: $textOrange1;
+        background-color: #fff;
+    @include avertaReg;
+    font-size: 32px;
+    transition-property: color, background-color;
+    transition-duration: 0.7s;
+    transition-timing-function: $slideHarsh1;
+    transition-delay: 0s;
+}
+
+    .buttonOrange1:hover {
+        background-color: $textOrange1;
+        color: #fff;
+        transition-property: color, background-color;
+        transition-duration: 0.7s;
+        transition-timing-function: $slideHarsh1;
+        transition-delay: 0s;
+    }
+
+// styles beginning
+
+html {
+    font-size: 32px;
+}
+
+#body {
+    overflow-x: hidden;
+}
+
+#header {
+    width: 100vw;
+    height: 48px;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, hsl(35deg 100% 61%) 0%, hsl(20deg 79% 54%) 50%, hsl(0deg 76% 51%) 100%);
+
+    #headerLogoCont {
+        // margin-left: 50px;
+    }
+
+    #headerLogo {
+        width: 9.2vh;
+        margin-top: 8px;
+        // margin-left: 9vw;
+    }
+
+    #headerMenuIconCont {
+        // margin-right: 22px;
+
+        #headerMenuIcon {
+            width: 3vh;
+            margin-top: 7px;
+        }
+    }   
+}
+
+// keyframes for screen1 container
+
+@keyframes s1Arrow {
+    0% {bottom: 30px; opacity: 0.5;}
+    80% {opacity: 1;}
+    100% {bottom: 0px;}
+}
+
+@keyframes s1Cloud {
+    100% {right: 0vw;}
+}
+
+@keyframes s1Solutions {
+    100% {left: 0vw;}
+}
+
+@keyframes opacity0to1 {
+    0% {opacity: 0;};
+    100% {opacity: 1;};
+}
+
+#screen1 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-image: url(images/bg1.jpg);
+    background-position: center;
+    background-size: auto 110%;
+
+    #s1Caption {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #s1CaptionTop {
+        font-size: 64px;
+        line-height: 76px;
+        color: #fff;
+        text-align: center;
+        @include avertaSemi;
+
+        #s1Cloud {
+            position: relative;
+            right: 100vw;  
+            // js function s1Animate() after onload
+        }
+
+        #s1Solutions {
+            position: relative;
+            left: 100vw;
+            // js function s1Animate() after onload
+        }
+
+    }
+
+    #s1CaptionSub {
+        font-size: 36px;
+        color: #fff;
+        text-align: center;
+        @include avertaLight;
+
+        #s1Foreveryone {
+            opacity: 0;
+            // js function s1Animate() after onload
+        }
+    }
+
+    #s1Arrow {
+        position: relative;
+        width: 62px;
+        margin-top: 32vh;
+        margin-bottom: 2vh;
+        animation-name: s1Arrow;
+        animation-duration: 1.2s;
+        animation-timing-function: $slideHarsh1;
+        animation-iteration-count: infinite;
+    }
+}
+
+// screen 2 styles start
+
+#screen2 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 36px;
+
+    #s2Caption {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
+
+        #s2Thepowerof {
+            font-size: $fontsizeCaption1;
+            text-align: center;
+            @include avertaReg;
+            color: $textOrange1;
+            margin-bottom: 14px;
+        }
+
+        #s2Logo {
+            width: 202px;
+            opacity: 0;
+            // js function s1Animate() after onload
+        }
+    }
+
+    #s2FeaturesWindow {
+        width: 100vw;
+        display: flex;
+        grid-gap: 80px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        overflow: hidden;
+
+        #s2FeaturesCont {
+            display: flex;
+            // flex-direction: row;
+            // justify-content: flex-start;
+            // align-items: center;
+            grid-gap: 80px;
+            transition: all 0.7s $slideSmooth1;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            padding-bottom: 50px;
+
+            .s2FeatureBlock {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                // margin-right: 80px;
+                // last .s2FeatureBlock has m-right: 0px, style below
+
+                img.s2FeatureImg {
+                    width: 116px;
+                    // margin-bottom: 8px;
+                }
+
+                .s2FeatureCaption {
+                    font-size: 38px;
+                    color: $textOrange1;
+                    text-align: center;
+                    @include avertaSemi;
+                    margin-bottom: 8px;
+                }
+
+                .s2CaptionAnno {
+                    width: 340px;
+                    font-size: $fontsizeTextOrdinary1;
+                    color: $textBlack1;
+                    text-align: center;
+                    @include sourcesansReg; 
+                }
+            }
+
+            .s2FeatureBlock:first-child {
+                margin-left: 100px;
+            }
+
+            .s2FeatureBlock:last-child {
+                margin-right: 100px;
+            }
+        }
+
+    }
+
+    #s2Buttons {
+        display: none;
+        // flex-direction: row;
+        // justify-content: center;
+        // align-items: center;
+        // margin-bottom:80px;
+
+        // #s2ArrowLeft {
+        //     height: 9vw;
+        //     margin-right: 30px;
+        // }
+
+        // #s2ArrowRight {
+        //     height: 9vw;
+        //     margin-left: 30px;
+        // }
+    }
+
+    #s2Button {
+        width: 216px;
+        height: 62px;
+        margin-bottom: 60px;
+        border-radius: 40px;
+        background: $brandGradient1rev;
+        text-align: center;
+        line-height: 58px;
+        font-size: $fontsizeCaption1;
+        @include avertaReg;
+        color: #fff;
+    }
+}
+
+#screen3 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #dbb591;
+    
+    #s3Caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        @include avertaReg;
+        font-size: $fontsizeCaption1;
+        color: #fff;
+
+        #s3Havealook {
+            opacity: 0;
+        }
+
+        #s3Inside {
+            opacity: 0;
+        }
+    }
+
+    #s3ImgsWindow {
+        width: 100vw;
+        // height: 700px;
+        margin-bottom: 10px;
+        display: flex;
+        overflow: hidden;
+
+        #s3ImgsCont {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            grid-gap: 40px;
+            transition: all 0.6s $slideSmooth1;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            margin-top: 32px;
+            margin-bottom: 20px;
+ 
+            img.s3Img {
+                width: 380px;
+                height: 510px;
+                object-fit: cover;
+            }
+ 
+            img.s3Img:first-of-type {
+                padding-left: 60px;
+            }
+ 
+            img.s3Img:last-of-type {
+                padding-right: 60px;
+            }
+        }
+
+        #s3ImgsArrows {
+            display: none;
+        //     position: absolute;
+        //     height: 115vw;
+        //     width: 100%;
+        //     display: flex;
+        //     flex-direction: row;
+        //     justify-content: space-between;
+        //     align-items: center;
+
+        //     #s3ImgsLeft {
+        //         display: none;
+        //         height: 10vw;
+        //         padding-left: 12vw;
+        //     }
+
+        //     #s3ImgsRight {
+        //         display: none;
+        //         height: 10vw;
+        //         padding-right: 12vw;
+        //     }  
+        }
+    } 
+
+    #s3Caption2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 50px;
+        @include avertaReg;
+        font-size: $fontsizeCaption1;
+        color: #fff;
+
+        #andgetdeeper {
+            opacity: 0;
+        }
+
+        #withvirtualtour {
+            opacity: 0;
+        }
+    }
+
+    #s3virtualTour {
+        width: 980px;
+        height: 640px;
+        background-color:#adabab;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+
+        #s3vtStatus {
+            width: 40px;
+        }
+    }
+}
+
+#screen4 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    background-color: #dbb591;
+
+    #s4Caption {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 60px;
+        @include avertaReg;
+        font-size: $fontsizeCaption1;
+        color: #fff;
+    }
+
+    .s4personBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 340px;
+
+        .s4personImg {
+            width: 240px;
+            border-radius: 60px;
+            margin-bottom: 12px;
+        }
+
+        .s4personName {
+            @include avertaSemi;
+            color: #fff;
+            font-size: $fontsizeCaption1;
+        }
+
+        .s4personPosition {
+            @include avertaLight;
+            color: #fff;
+            font-size: $fontsizeCaption2;
+            margin-bottom: 8px;
+            margin-top: -4px;
+        }
+
+        .s4personText {
+            @include sourcesansReg;
+            text-align: center;
+            color: #fff;
+            font-size: $fontsizeTextOrdinary1;
+            margin-bottom: 56px;
+        }
+    }
+}
+
+#screen5 {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    #desktopappBox {
+        width: 85vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+        #s5Caption {
+            text-align: center;
+            @include sourcesansReg;
+            font-size: $fontsizeCaption2;
+            color: $textOrange1;
+            margin-bottom: 20px;
+        }
+
+        #s5buttonDesktop {
+            width: 220px;
+            height: 62px;
+        }
+    }
+
+    #mobileappBox {
+        width: 85vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 20px;
+        margin-bottom: 50px;
+
+        #s5Caption2 {
+            text-align: center;
+            @include sourcesansReg;
+            font-size: 32px;
+            color: $textOrange1;
+            margin-bottom: 30px;
+        }
+
+        #s5buttonMobile {
+            width: 220px;
+            height: 62px;
+        }
+    }
+
+    #s5feedbackBox {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        
+        #s5Caption3 {
+            text-align: center;
+            @include avertaReg;
+            font-size: 40px;
+            margin-bottom: 44px;
+        }
+
+        #s5feedbackWindow {
+            // width: 100vw;
+            display: flex;
+            // flex-direction: column;
+            // justify-content: flex-start;
+            // align-items: center;
+            overflow-y: hidden;
+            overflow-x: hidden;
+
+            #s5feedbackCont {
+                // width: 100vw;
+                // height: 330px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: center;
+                grid-gap: 80px;
+                transition: all 0.6s $slideSmooth1;
+                margin-bottom: 44px;
+                overflow-y: hidden;
+                overflow-x: scroll;
+
+                .s5feedbackItem {
+                    width: 400px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+
+                    .s5feedbackName {
+                        @include avertaLight;
+                        font-size: 30px;
+                        color: $textOrange1;
+                        margin-bottom: 6px;
+                    }
+
+                    .s5feedbackText {
+                        @include sourcesansReg;
+                        font-size: $fontsizeTextOrdinary1;
+                        margin-bottom: 8px;
+                    }
+                    
+                    .s5feedbackCompany {
+                        @include avertaLight;
+                        font-size: 30px;
+                        color: orange;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-end;
+                        align-items: center;
+                    }
+                }
+                
+                .s5feedbackItem:first-of-type {
+                    margin-left: 140px;
+                }
+
+                .s5feedbackItem:last-of-type {
+                    margin-right: 140px;
+                }
+            }
+        }
+
+        #s5Buttons {
+            display: none;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+
+            #s5ArrowLeft {
+                height: 9vw;
+                margin-right: 30px;
+            }
+
+            #s5ArrowRight {
+                height: 9vw;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    #s5PartnersBox {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        #s5PartnersCaption {
+            @include avertaSemi;
+            font-size: $fontsizeCaption1;
+            color: $textOrange1;
+        }
+
+        #s5PartnersCont {
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 74px;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            margin-bottom: 32px;
+
+            img.s5PartnersLogo {
+                width: 160px;
+            }
+
+            img.s5PartnersLogo:first-of-type {
+                margin-left: 80px;
+            }
+
+            img.s5PartnersLogo:last-of-type {
+                margin-right: 80px;
+            }
+
+            #logoLacoste1 {
+                width: 142px !important;
+            }
+
+            #logoHuawei1 {
+                width: 90px !important;
+            }
+
+        }
+    }
+}    
+
+footer {
+    width: 100vw;
+    background-color: #adabab;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+
+    #fBlock1 {
+        width: 44vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+        margin-bottom: 16px;
+
+        #fB1Slogan {
+            @include sourcesansReg;
+            font-size: 26px;
+            color: white;
+            line-height: 22px;
+            @include footerDarkenElems
+        } 
+        
+            #fB1Slogan:hover {
+                filter: brightness(90%);
+                @include footerDarkenElems
+            }
+        
+        #fB1Logo {
+            width: 10vh;
+            padding-top: 4px;
+            @include footerDarkenElems
+        }
+
+            #fB1Logo:hover {
+                filter: brightness(90%);
+                @include footerDarkenElems
+            }
+    }
+
+    #fBlock2 {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 12px;
+
+        #fB2Email {
+            @include avertaLight;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 6px;
+            @include footerDarkenElems
+        }
+
+            #fB2Email:hover {
+                filter: brightness(90%);
+                @include footerDarkenElems
+            }
+
+        #fB2phone {
+            @include avertaLight;
+            font-size: 28px;
+            color: white;
+            @include footerDarkenElems
+        }
+
+            #fB2phone:hover {
+                filter: brightness(90%);
+                @include footerDarkenElems
+            }
+    }
+
+    #fBlock3 {
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 12px;
+
+        #fB3Address {
+            @include avertaSemi;
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            @include footerDarkenElems
+        }
+
+            #fB3Address:hover {
+                filter: brightness(90%);
+                @include footerDarkenElems
+            }
+    }
+    #fBlock4 {
+        width: 34vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        img.fB4Icon {
+            height: 40px;
+            @include footerDarkenElems
+        }
+
+            img.fB4Icon:hover {
+                filter: brightness(90%);
+                @include footerDarkenElems
+            }
+    }
+
+    #fBlock5 {
+        width: 56vw;
+        margin-bottom: 40px;
+        
+        #fB5Tothetop {
+            @include sourcesansReg;
+            font-size: 28px;
+            color: #fff;
+            text-align: center;
+            @include footerDarkenElems
+        }
+    }
+}

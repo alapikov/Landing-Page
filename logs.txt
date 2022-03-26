@@ -1,6 +1,7 @@
 sass --watch stylesCommon.scss stylesCommon.css
 sass --watch stylesMobile.scss stylesMobile.css
 sass --watch stylesTablet.scss stylesTablet.css
+sass --watch stylesDesktop.scss stylesDesktop.css
 
 ------------ remarks:
 - 
@@ -46,3 +47,4 @@ sass --watch stylesTablet.scss stylesTablet.css
 - add title screen ambient effects
 - design header pop-up menu
 - refactor everything
+- adjust media queries for smartphones, tablet styles
