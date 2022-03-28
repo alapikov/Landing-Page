@@ -95,9 +95,18 @@ $textBlack1: rgb(27, 27, 27);
 $brandGradient1: linear-gradient(90deg, hsl(35, 100%, 61%) 0%, hsl(20, 79%, 54%) 50%, #e12323 100%);
 $brandGradient1rev: linear-gradient(270deg, hsl(35deg 100% 61%) 0%, hsl(20deg 79% 54%) 50%, hsl(0deg 76% 51%) 100%);
 
-@mixin footerDarkenElems {
+@mixin DarkenElem1_Base {
+    filter: brightness(100%);
     transition-property: filter;
-    transition-duration: 0.8s;
+    transition-duration: 0.4s;
+    transition-timing-function: $slideSmooth2;
+    transition-delay: 0s;
+}
+
+@mixin DarkenElem1_Onclick {
+    filter: brightness(88%);
+    transition-property: filter;
+    transition-duration: 0.4s;
     transition-timing-function: $slideSmooth2;
     transition-delay: 0s;
 }

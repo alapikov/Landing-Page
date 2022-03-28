@@ -12,7 +12,7 @@ $fontsizeTextOrdinary1: 18px;
         color: $textOrange1;
         background-color: #fff;
     @include avertaReg;
-    font-size: 32px;
+    font-size: 26px;
     transition-property: color, background-color;
     transition-duration: 0.7s;
     transition-timing-function: $slideHarsh1;
@@ -45,7 +45,7 @@ html {
     z-index: 10;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(90deg, hsl(35deg 100% 61%) 0%, hsl(20deg 79% 54%) 50%, hsl(0deg 76% 51%) 100%);
 
@@ -56,7 +56,7 @@ html {
     #headerLogo {
         width: 9.2vh;
         margin-top: 8px;
-        // margin-left: 9vw;
+        margin-left: 16vw;
     }
 
     #headerMenuIconCont {
@@ -65,6 +65,7 @@ html {
         #headerMenuIcon {
             width: 3vh;
             margin-top: 7px;
+            margin-right: 36px;
         }
     }   
 }
@@ -185,21 +186,21 @@ html {
 
     #s2FeaturesWindow {
         width: 100vw;
-        display: flex;
-        grid-gap: 80px;
+        // display: flex;
+        // flex-direction: row;
+        // justify-content: space-between;
+        // align-items: center;
+        // grid-gap: 80px;
         margin-top: 40px;
         margin-bottom: 50px;
-        overflow: hidden;
+        margin: 0 auto;
 
         #s2FeaturesCont {
-            display: flex;
-            // flex-direction: row;
-            // justify-content: flex-start;
-            // align-items: center;
-            grid-gap: 80px;
+            display: grid;
+            grid-template-columns: repeat(3, 360px);
+            justify-content: center;
             transition: all 0.7s $slideSmooth1;
-            overflow-y: hidden;
-            overflow-x: scroll;
+            margin-top: 50px;
             padding-bottom: 50px;
 
             .s2FeatureBlock {
@@ -207,8 +208,7 @@ html {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                // margin-right: 80px;
-                // last .s2FeatureBlock has m-right: 0px, style below
+                margin-bottom: 36px;
 
                 img.s2FeatureImg {
                     width: 116px;
@@ -224,23 +224,14 @@ html {
                 }
 
                 .s2CaptionAnno {
-                    width: 340px;
+                    width: 294px;
                     font-size: $fontsizeTextOrdinary1;
                     color: $textBlack1;
                     text-align: center;
                     @include sourcesansReg; 
                 }
             }
-
-            .s2FeatureBlock:first-child {
-                margin-left: 100px;
-            }
-
-            .s2FeatureBlock:last-child {
-                margin-right: 100px;
-            }
         }
-
     }
 
     #s2Buttons {
@@ -416,39 +407,47 @@ html {
         color: #fff;
     }
 
-    .s4personBox {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 340px;
+    #s4teamCont {
+        display: grid;
+        align-items: start;
+        justify-items: center;
+        grid-template-columns: repeat(2, 300px);
+        grid-gap: 40px;
+        margin-bottom: 40px;
 
-        .s4personImg {
-            width: 240px;
-            border-radius: 60px;
-            margin-bottom: 12px;
-        }
-
-        .s4personName {
-            @include avertaSemi;
-            color: #fff;
-            font-size: $fontsizeCaption1;
-        }
-
-        .s4personPosition {
-            @include avertaLight;
-            color: #fff;
-            font-size: $fontsizeCaption2;
-            margin-bottom: 8px;
-            margin-top: -4px;
-        }
-
-        .s4personText {
-            @include sourcesansReg;
-            text-align: center;
-            color: #fff;
-            font-size: $fontsizeTextOrdinary1;
-            margin-bottom: 56px;
+        .s4personBox {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            width: 300px;
+    
+            .s4personImg {
+                width: 240px;
+                border-radius: 60px;
+                margin-bottom: 12px;
+            }
+    
+            .s4personName {
+                @include avertaSemi;
+                color: #fff;
+                font-size: $fontsizeCaption1;
+            }
+    
+            .s4personPosition {
+                @include avertaLight;
+                color: #fff;
+                font-size: $fontsizeCaption2;
+                margin-bottom: 8px;
+                margin-top: -4px;
+            }
+    
+            .s4personText {
+                @include sourcesansReg;
+                text-align: center;
+                color: #fff;
+                font-size: $fontsizeTextOrdinary1;
+            }
         }
     }
 }
@@ -478,8 +477,8 @@ html {
         }
 
         #s5buttonDesktop {
-            width: 220px;
-            height: 62px;
+            width: 180px;
+            height: 54px;
         }
     }
 
@@ -495,14 +494,14 @@ html {
         #s5Caption2 {
             text-align: center;
             @include sourcesansReg;
-            font-size: 32px;
+            font-size: $fontsizeCaption2;
             color: $textOrange1;
             margin-bottom: 30px;
         }
 
         #s5buttonMobile {
-            width: 220px;
-            height: 62px;
+            width: 180px;
+            height: 54px;
         }
     }
 
@@ -516,7 +515,7 @@ html {
         #s5Caption3 {
             text-align: center;
             @include avertaReg;
-            font-size: 40px;
+            font-size: $fontsizeCaption1;
             margin-bottom: 44px;
         }
 
@@ -543,7 +542,7 @@ html {
                 overflow-x: scroll;
 
                 .s5feedbackItem {
-                    width: 400px;
+                    // width: 400px;
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-start;
@@ -551,7 +550,7 @@ html {
 
                     .s5feedbackName {
                         @include avertaLight;
-                        font-size: 30px;
+                        font-size: 26px;
                         color: $textOrange1;
                         margin-bottom: 6px;
                     }
@@ -560,11 +559,13 @@ html {
                         @include sourcesansReg;
                         font-size: $fontsizeTextOrdinary1;
                         margin-bottom: 8px;
+                        width: 300px;
+                        
                     }
                     
                     .s5feedbackCompany {
                         @include avertaLight;
-                        font-size: 30px;
+                        font-size: 26px;
                         color: orange;
                         display: flex;
                         flex-direction: row;
@@ -603,7 +604,7 @@ html {
     }
 
     #s5PartnersBox {
-        width: 100vw;
+        width: 52vw;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -616,7 +617,7 @@ html {
         }
 
         #s5PartnersCont {
-            width: 100vw;
+            width: 52vw;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -627,7 +628,7 @@ html {
             margin-bottom: 32px;
 
             img.s5PartnersLogo {
-                width: 160px;
+                width: 140px;
             }
 
             img.s5PartnersLogo:first-of-type {
@@ -639,11 +640,11 @@ html {
             }
 
             #logoLacoste1 {
-                width: 142px !important;
+                width: 126px !important;
             }
 
             #logoHuawei1 {
-                width: 90px !important;
+                width: 80px !important;
             }
 
         }
@@ -660,7 +661,7 @@ footer {
 
 
     #fBlock1 {
-        width: 44vw;
+        width: 28vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -703,7 +704,7 @@ footer {
 
         #fB2Email {
             @include avertaLight;
-            font-size: 28px;
+            font-size: 22px;
             color: white;
             margin-bottom: 6px;
             @include footerDarkenElems
@@ -716,7 +717,7 @@ footer {
 
         #fB2phone {
             @include avertaLight;
-            font-size: 28px;
+            font-size: 22px;
             color: white;
             @include footerDarkenElems
         }
@@ -737,7 +738,7 @@ footer {
 
         #fB3Address {
             @include avertaSemi;
-            font-size: 28px;
+            font-size: 22px;
             color: white;
             text-align: center;
             @include footerDarkenElems
@@ -749,7 +750,7 @@ footer {
             }
     }
     #fBlock4 {
-        width: 34vw;
+        width: 14vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -773,7 +774,7 @@ footer {
         
         #fB5Tothetop {
             @include sourcesansReg;
-            font-size: 28px;
+            font-size: 22px;
             color: #fff;
             text-align: center;
             @include footerDarkenElems

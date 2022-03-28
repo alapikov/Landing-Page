@@ -4,17 +4,17 @@ const screenRatio = (document.documentElement.clientHeight  / document.documentE
 
 console.log('screenRatio is: ' + screenRatio);
 
-(function adaptHeader() {
-    if (screenRatio <= 1.945) {
-        const header = document.querySelector('#header');
-        header.style.height = '46px';
-        const headerLogo = document.querySelector('#headerLogo');
-        headerLogo.style.width = '86px';
-        const headerMenuIcon = document.querySelector('#headerMenuIcon');
-        headerMenuIcon.style.width = '28px';
-        headerMenuIcon.style.marginTop = '9px';
-    }
-} ());
+// (function adaptHeader() {
+//     if (screenRatio <= 1.945) {
+//         const header = document.querySelector('#header');
+//         header.style.height = '46px';
+//         const headerLogo = document.querySelector('#headerLogo');
+//         headerLogo.style.width = '86px';
+//         const headerMenuIcon = document.querySelector('#headerMenuIcon');
+//         headerMenuIcon.style.width = '28px';
+//         headerMenuIcon.style.marginTop = '9px';
+//     }
+// } ());
 
 (function adaptS2ContSize() {
     if (screenRatio <= 1.945) {

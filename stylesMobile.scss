@@ -1,5 +1,13 @@
 @import 'stylesCommon.scss';
 
+$fontsizeTitle: 14vw;
+$fontsizeSubTitle: 7.5vw;
+$fontsizeCaption1: 7vw;
+$fontsizeCaption2: 8vw;
+$fontsizeSubCaption2: 6.3vw;
+$fontsizeTextOrdinary1: 5.1vw;
+$fullWidthTextBlock: 84vw;
+
 // components 
 
 .buttonOrange1 {
@@ -24,6 +32,35 @@
         transition-delay: 0s;
     }
 
+.buttonGradient1 {
+    width: 52vw;
+    height: 60px;
+    border-radius: 40px;
+    background: $brandGradient1rev;
+    text-align: center;
+    line-height: 56px;
+    font-size: 6.8vw;
+    @include avertaReg;
+    color: #fff;
+}
+
+.LRSwitchButtons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    :first-child {
+        height: 9vw;
+        margin-right: 30px;
+    }
+
+    :last-child {
+        height: 9vw;
+        margin-left: 30px;
+    }
+}   
+
 // styles beginning
 
 // @media (max-width: 490px) {
@@ -37,7 +74,7 @@
 
     #header {
         width: 100vw;
-        height: 58px;
+        height: 6vh;
         position: fixed;
         z-index: 10;
         display: flex;
@@ -47,21 +84,22 @@
         background: linear-gradient(90deg, hsl(35deg 100% 61%) 0%, hsl(20deg 79% 54%) 50%, hsl(0deg 76% 51%) 100%);
 
         #headerLogoCont {
-            margin-left: 50px;
+            margin-top: 1vh;
+            margin-left: 15vw;
         }
 
         #headerLogo {
-            width: 100px;
-            margin-top: 8px;
-            margin-left: 10px;
+            height: 3.7vh;
+            
         }
 
         #headerMenuIconCont {
-            margin-right: 24px;
+            margin-right: 16px;
+            margin-top: 0.9vh;
 
             #headerMenuIcon {
-                width: 32px;
-                margin-top: 7px;
+                height: 3.6vh;
+                
             }
         }   
     }
@@ -104,7 +142,7 @@
         }
 
         #s1CaptionTop {
-            font-size: 14vw;
+            font-size: $fontsizeTitle;
             line-height: 15vw;
             color: #fff;
             text-align: center;
@@ -125,7 +163,7 @@
         }
 
         #s1CaptionSub {
-            font-size: 7.5vw;
+            font-size: $fontsizeSubTitle;
             color: #fff;
             text-align: center;
             @include avertaLight;
@@ -138,9 +176,9 @@
 
         #s1Arrow {
             position: relative;
-            width: 16vw;
-            margin-top: 27vh;
-            margin-bottom: 4vh;
+            width: 14vw;
+            margin-top: 32vh;
+            margin-bottom: 2vh;
             animation-name: s1Arrow;
             animation-duration: 1.2s;
             animation-timing-function: $slideHarsh1;
@@ -156,7 +194,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 36px;
+        padding-top: 28px;
 
         #s2Caption {
             width: 80%;
@@ -165,7 +203,7 @@
             align-items: center;
 
             #s2Thepowerof {
-                font-size: 7vw;
+                font-size: $fontsizeCaption1;
                 text-align: center;
                 @include avertaReg;
                 color: $textOrange1;
@@ -180,11 +218,11 @@
         }
 
         #s2FeaturesWindow {
-            width: 86%;
+            width: $fullWidthTextBlock;
             display: flex;
             grid-gap: 80px;
-            margin-top: 40px;
-            margin-bottom: 30px;
+            margin-top: 24px;
+            margin-bottom: 28px;
             overflow: hidden;
 
             #s2FeaturesCont {
@@ -206,7 +244,11 @@
     
                     img.s2FeatureImg {
                         width: 38vw;
-                        margin-bottom: 8px;
+                        @include DarkenElem1_Base;
+                    }
+
+                    img.s2FeatureImg:hover {
+                        @include DarkenElem1_Onclick;
                     }
     
                     .s2FeatureCaption {
@@ -215,11 +257,16 @@
                         text-align: center;
                         @include avertaSemi;
                         margin-bottom: 8px;
+                        @include DarkenElem1_Base;
+                    }
+
+                    .s2FeatureCaption:hover {
+                        @include DarkenElem1_Onclick;
                     }
     
                     .s2CaptionAnno {
-                        width: 86vw;
-                        font-size: 5.3vw;
+                        width: $fullWidthTextBlock;
+                        font-size: $fontsizeTextOrdinary1;
                         color: $textBlack1;
                         text-align: center;
                         @include sourcesansReg; 
@@ -233,35 +280,14 @@
 
         }
 
-        #s2Buttons {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            margin-bottom:80px;
-
-            #s2ArrowLeft {
-                height: 9vw;
-                margin-right: 30px;
-            }
-
-            #s2ArrowRight {
-                height: 9vw;
-                margin-left: 30px;
-            }
+        #s2Button {
+            margin-top: 72px;
+            margin-bottom: 48px;
+            @include DarkenElem1_Base;
         }
 
-        #s2Button {
-            width: 56vw;
-            height: 64px;
-            margin-bottom: 80px;
-            border-radius: 40px;
-            background: $brandGradient1rev;
-            text-align: center;
-            line-height: 60px;
-            font-size: 7vw;
-            @include avertaReg;
-            color: #fff;
+        #s2Button:hover {
+            @include DarkenElem1_Onclick;
         }
     }
 
@@ -278,10 +304,10 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            margin-top: 40px;
+            margin-top: 28px;
             margin-bottom: 40px;
             @include avertaReg;
-            font-size: 7vw;
+            font-size: $fontsizeCaption1;
             color: #fff;
 
             #s3Havealook {
@@ -296,7 +322,7 @@
         #s3ImgsWindow {
             width: 100vw;
             height: 115vw;
-            margin-bottom: 40px;
+            margin-bottom: 26px;
             display: flex;
             overflow: hidden;
 
@@ -349,9 +375,9 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            margin-bottom: 50px;
+            margin-bottom: 38px;
             @include avertaReg;
-            font-size: 7vw;
+            font-size: $fontsizeCaption1;
             color: #fff;
 
             #andgetdeeper {
@@ -371,7 +397,7 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
 
             #s3vtStatus {
                 width: 8%;
@@ -396,7 +422,7 @@
             align-items: center;
             margin-bottom: 40px;
             @include avertaReg;
-            font-size: 7vw;
+            font-size: $fontsizeCaption1;
             color: #fff;
         }
 
@@ -405,7 +431,7 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            width: 85vw;
+            width: 84vw;
 
             .s4personImg {
                 width: 58vw;
@@ -416,14 +442,14 @@
             .s4personName {
                 @include avertaSemi;
                 color: #fff;
-                font-size: 8vw;
+                font-size: $fontsizeCaption2;
                 margin-bottom: -2px;
             }
 
             .s4personPosition {
                 @include avertaLight;
                 color: #fff;
-                font-size: 6.3vw;
+                font-size: $fontsizeSubCaption2;
                 margin-bottom: 8px;
             }
 
@@ -431,7 +457,7 @@
                 @include sourcesansReg;
                 text-align: center;
                 color: #fff;
-                font-size: 5.3vw;
+                font-size: $fontsizeTextOrdinary1;
                 margin-bottom: 40px;
             }
         }
@@ -450,8 +476,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            margin-top: 50px;
-            margin-bottom: 20px;
+            margin-top: 28px;
+            margin-bottom: 6px;
 
             #s5Caption {
                 text-align: center;
@@ -462,8 +488,8 @@
             }
 
             #s5buttonDesktop {
-                width: 34vw;
-                height: 52px;
+                width: 32vw;
+                height: 50px;
             }
         }
 
@@ -474,7 +500,7 @@
             align-items: center;
             justify-content: flex-start;
             margin-top: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 32px;
 
             #s5Caption2 {
                 text-align: center;
@@ -485,8 +511,8 @@
             }
 
             #s5buttonMobile {
-                width: 34vw;
-                height: 52px;
+                width: 32vw;
+                height: 50px;
             }
         }
 
@@ -500,7 +526,7 @@
             #s5Caption3 {
                 text-align: center;
                 @include avertaReg;
-                font-size: 7vw;
+                font-size: $fontsizeCaption1;
                 margin-bottom: 30px;
             }
 
@@ -564,21 +590,7 @@
             }
 
             #s5Buttons {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin-bottom: 50px;
-    
-                #s5ArrowLeft {
-                    height: 9vw;
-                    margin-right: 30px;
-                }
-    
-                #s5ArrowRight {
-                    height: 9vw;
-                    margin-left: 30px;
-                }
+                margin-bottom: 42px;
             }
         }
 
@@ -591,7 +603,7 @@
 
             #s5PartnersCaption {
                 @include avertaSemi;
-                font-size: 7vw;
+                font-size: $fontsizeCaption1;
                 color: $textOrange1;
             }
 
@@ -601,29 +613,29 @@
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
-                gap: 50px;
+                gap: 40px;
                 overflow-y: hidden;
                 overflow-x: scroll;
                 margin-bottom: 12px;
 
                 img.s5PartnersLogo {
-                    width: 140px;
+                    width: 120px;
                 }
 
                 img.s5PartnersLogo:first-of-type {
-                    margin-left: 80px;
+                    margin-left: 60px;
                 }
 
                 img.s5PartnersLogo:last-of-type {
-                    margin-right: 80px;
+                    margin-right: 60px;
                 }
 
                 #logoLacoste1 {
-                    width: 128px !important;
+                    width: 110px !important;
                 }
 
                 #logoHuawei1 {
-                    width: 84px !important;
+                    width: 76px !important;
                 }
 
             }
@@ -640,7 +652,7 @@
 
 
         #fBlock1 {
-            width: 66vw;
+            width: 64vw;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -650,27 +662,16 @@
 
             #fB1Slogan {
                 @include sourcesansReg;
-                font-size: 5.3vw;
+                font-size: $fontsizeTextOrdinary1;
                 color: white;
                 line-height: 22px;
-                @include footerDarkenElems
             } 
             
-                #fB1Slogan:hover {
-                    filter: brightness(90%);
-                    @include footerDarkenElems
-                }
-            
             #fB1Logo {
-                width: 100px;
+                height: 3.7vh;
                 padding-top: 4px;
-                @include footerDarkenElems
+        
             }
-
-                #fB1Logo:hover {
-                    filter: brightness(90%);
-                    @include footerDarkenElems
-                }
         }
 
         #fBlock2 {
@@ -683,28 +684,18 @@
 
             #fB2Email {
                 @include avertaLight;
-                font-size: 5vw;
+                font-size: $fontsizeTextOrdinary1;
                 color: white;
                 margin-bottom: 6px;
-                @include footerDarkenElems
+        
             }
-
-                #fB2Email:hover {
-                    filter: brightness(90%);
-                    @include footerDarkenElems
-                }
 
             #fB2phone {
                 @include avertaLight;
                 font-size: 5vw;
                 color: white;
-                @include footerDarkenElems
+        
             }
-
-                #fB2phone:hover {
-                    filter: brightness(90%);
-                    @include footerDarkenElems
-                }
         }
 
         #fBlock3 {
@@ -717,16 +708,11 @@
 
             #fB3Address {
                 @include avertaSemi;
-                font-size: 5vw;
+                font-size: $fontsizeTextOrdinary1;
                 color: white;
                 text-align: center;
-                @include footerDarkenElems
+        
             }
-
-                #fB3Address:hover {
-                    filter: brightness(90%);
-                    @include footerDarkenElems
-                }
         }
         #fBlock4 {
             width: 56vw;
@@ -738,13 +724,8 @@
 
             img.fB4Icon {
                 height: 40px;
-                @include footerDarkenElems
+        
             }
-
-                img.fB4Icon:hover {
-                    filter: brightness(90%);
-                    @include footerDarkenElems
-                }
         }
 
         #fBlock5 {
@@ -753,10 +734,10 @@
             
             #fB5Tothetop {
                 @include sourcesansReg;
-                font-size: 5.3vw;
+                font-size: $fontsizeTextOrdinary1;
                 color: #fff;
                 text-align: center;
-                @include footerDarkenElems
+                text-decoration: underline;
             }
         }
     }

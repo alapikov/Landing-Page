@@ -7,7 +7,9 @@ sass --watch stylesDesktop.scss stylesDesktop.css
 - 
 
 ------------ styles rules:
+- title caption size: mobile - 14vw
 - big caption size: mobile - 7vw, tablet - 40px
+- mobile boundaries for text block - 84% from screen width (84vw)
 
 ------------ code style rules:
 - const name in JS always equals its HTML id, e.g. const headerMenuIcon = document.querySelector('#headerMenuIcon');
@@ -48,3 +50,5 @@ sass --watch stylesDesktop.scss stylesDesktop.css
 - design header pop-up menu
 - refactor everything
 - adjust media queries for smartphones, tablet styles
+- write real reviews in the review box
+- finish hover mixin

@@ -49,7 +49,7 @@ span {
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
-  font-size: 32px;
+  font-size: 26px;
   transition-property: color, background-color;
   transition-duration: 0.7s;
   transition-timing-function: cubic-bezier(0.53, 0.02, 0.32, 1);
@@ -80,17 +80,19 @@ html {
   z-index: 10;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, #ffac38 0%, #e66b2d 50%, #e12323 100%);
 }
 #header #headerLogo {
   width: 9.2vh;
   margin-top: 8px;
+  margin-left: 16vw;
 }
 #header #headerMenuIconCont #headerMenuIcon {
   width: 3vh;
   margin-top: 7px;
+  margin-right: 36px;
 }
 
 @keyframes s1Arrow {
@@ -207,18 +209,16 @@ html {
 }
 #screen2 #s2FeaturesWindow {
   width: 100vw;
-  display: flex;
-  grid-gap: 80px;
   margin-top: 40px;
   margin-bottom: 50px;
-  overflow: hidden;
+  margin: 0 auto;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont {
-  display: flex;
-  grid-gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 360px);
+  justify-content: center;
   transition: all 0.7s cubic-bezier(0.69, 0, 0.32, 1);
-  overflow-y: hidden;
-  overflow-x: scroll;
+  margin-top: 50px;
   padding-bottom: 50px;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock {
@@ -226,6 +226,7 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-bottom: 36px;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock img.s2FeatureImg {
   width: 116px;
@@ -240,19 +241,13 @@ html {
   margin-bottom: 8px;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2CaptionAnno {
-  width: 340px;
+  width: 294px;
   font-size: 18px;
   color: #1b1b1b;
   text-align: center;
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-}
-#screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock:first-child {
-  margin-left: 100px;
-}
-#screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock:last-child {
-  margin-right: 100px;
 }
 #screen2 #s2Buttons {
   display: none;
@@ -384,26 +379,34 @@ html {
   font-size: 28px;
   color: #fff;
 }
-#screen4 .s4personBox {
+#screen4 #s4teamCont {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  grid-template-columns: repeat(2, 300px);
+  grid-gap: 40px;
+  margin-bottom: 40px;
+}
+#screen4 #s4teamCont .s4personBox {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 340px;
+  width: 300px;
 }
-#screen4 .s4personBox .s4personImg {
+#screen4 #s4teamCont .s4personBox .s4personImg {
   width: 240px;
   border-radius: 60px;
   margin-bottom: 12px;
 }
-#screen4 .s4personBox .s4personName {
+#screen4 #s4teamCont .s4personBox .s4personName {
   font-family: "Averta";
   font-weight: 500;
   font-style: normal;
   color: #fff;
   font-size: 28px;
 }
-#screen4 .s4personBox .s4personPosition {
+#screen4 #s4teamCont .s4personBox .s4personPosition {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
@@ -412,14 +415,13 @@ html {
   margin-bottom: 8px;
   margin-top: -4px;
 }
-#screen4 .s4personBox .s4personText {
+#screen4 #s4teamCont .s4personBox .s4personText {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
   text-align: center;
   color: #fff;
   font-size: 18px;
-  margin-bottom: 56px;
 }
 
 #screen5 {
@@ -448,8 +450,8 @@ html {
   margin-bottom: 20px;
 }
 #screen5 #desktopappBox #s5buttonDesktop {
-  width: 220px;
-  height: 62px;
+  width: 180px;
+  height: 54px;
 }
 #screen5 #mobileappBox {
   width: 85vw;
@@ -465,13 +467,13 @@ html {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 32px;
+  font-size: 24px;
   color: #ec831a;
   margin-bottom: 30px;
 }
 #screen5 #mobileappBox #s5buttonMobile {
-  width: 220px;
-  height: 62px;
+  width: 180px;
+  height: 54px;
 }
 #screen5 #s5feedbackBox {
   width: 100vw;
@@ -485,7 +487,7 @@ html {
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
-  font-size: 40px;
+  font-size: 28px;
   margin-bottom: 44px;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow {
@@ -505,7 +507,6 @@ html {
   overflow-x: scroll;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont .s5feedbackItem {
-  width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -515,7 +516,7 @@ html {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 30px;
+  font-size: 26px;
   color: #ec831a;
   margin-bottom: 6px;
 }
@@ -525,12 +526,13 @@ html {
   font-style: normal;
   font-size: 18px;
   margin-bottom: 8px;
+  width: 300px;
 }
 #screen5 #s5feedbackBox #s5feedbackWindow #s5feedbackCont .s5feedbackItem .s5feedbackCompany {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 30px;
+  font-size: 26px;
   color: orange;
   display: flex;
   flex-direction: row;
@@ -559,7 +561,7 @@ html {
   margin-left: 30px;
 }
 #screen5 #s5PartnersBox {
-  width: 100vw;
+  width: 52vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -573,7 +575,7 @@ html {
   color: #ec831a;
 }
 #screen5 #s5PartnersBox #s5PartnersCont {
-  width: 100vw;
+  width: 52vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -584,7 +586,7 @@ html {
   margin-bottom: 32px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo {
-  width: 160px;
+  width: 140px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo:first-of-type {
   margin-left: 80px;
@@ -593,10 +595,10 @@ html {
   margin-right: 80px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont #logoLacoste1 {
-  width: 142px !important;
+  width: 126px !important;
 }
 #screen5 #s5PartnersBox #s5PartnersCont #logoHuawei1 {
-  width: 90px !important;
+  width: 80px !important;
 }
 
 footer {
@@ -608,7 +610,7 @@ footer {
   align-items: center;
 }
 footer #fBlock1 {
-  width: 44vw;
+  width: 28vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -662,7 +664,7 @@ footer #fBlock2 #fB2Email {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 28px;
+  font-size: 22px;
   color: white;
   margin-bottom: 6px;
   transition-property: filter;
@@ -681,7 +683,7 @@ footer #fBlock2 #fB2phone {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 28px;
+  font-size: 22px;
   color: white;
   transition-property: filter;
   transition-duration: 0.8s;
@@ -707,7 +709,7 @@ footer #fBlock3 #fB3Address {
   font-family: "Averta";
   font-weight: 500;
   font-style: normal;
-  font-size: 28px;
+  font-size: 22px;
   color: white;
   text-align: center;
   transition-property: filter;
@@ -723,7 +725,7 @@ footer #fBlock3 #fB3Address:hover {
   transition-delay: 0s;
 }
 footer #fBlock4 {
-  width: 34vw;
+  width: 14vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -752,7 +754,7 @@ footer #fBlock5 #fB5Tothetop {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 28px;
+  font-size: 22px;
   color: #fff;
   text-align: center;
   transition-property: filter;

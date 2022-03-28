@@ -65,6 +65,35 @@ span {
   transition-delay: 0s;
 }
 
+.buttonGradient1 {
+  width: 52vw;
+  height: 60px;
+  border-radius: 40px;
+  background: linear-gradient(270deg, #ffac38 0%, #e66b2d 50%, #e12323 100%);
+  text-align: center;
+  line-height: 56px;
+  font-size: 6.8vw;
+  font-family: "Averta";
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+
+.LRSwitchButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.LRSwitchButtons :first-child {
+  height: 9vw;
+  margin-right: 30px;
+}
+.LRSwitchButtons :last-child {
+  height: 9vw;
+  margin-left: 30px;
+}
+
 html {
   font-size: 32px;
 }
@@ -75,7 +104,7 @@ html {
 
 #header {
   width: 100vw;
-  height: 58px;
+  height: 6vh;
   position: fixed;
   z-index: 10;
   display: flex;
@@ -85,19 +114,18 @@ html {
   background: linear-gradient(90deg, #ffac38 0%, #e66b2d 50%, #e12323 100%);
 }
 #header #headerLogoCont {
-  margin-left: 50px;
+  margin-top: 1vh;
+  margin-left: 15vw;
 }
 #header #headerLogo {
-  width: 100px;
-  margin-top: 8px;
-  margin-left: 10px;
+  height: 3.7vh;
 }
 #header #headerMenuIconCont {
-  margin-right: 24px;
+  margin-right: 16px;
+  margin-top: 0.9vh;
 }
 #header #headerMenuIconCont #headerMenuIcon {
-  width: 32px;
-  margin-top: 7px;
+  height: 3.6vh;
 }
 
 @keyframes s1Arrow {
@@ -175,9 +203,9 @@ html {
 }
 #screen1 #s1Arrow {
   position: relative;
-  width: 16vw;
-  margin-top: 27vh;
-  margin-bottom: 4vh;
+  width: 14vw;
+  margin-top: 32vh;
+  margin-bottom: 2vh;
   animation-name: s1Arrow;
   animation-duration: 1.2s;
   animation-timing-function: cubic-bezier(0.53, 0.02, 0.32, 1);
@@ -190,7 +218,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 36px;
+  padding-top: 28px;
 }
 #screen2 #s2Caption {
   width: 80%;
@@ -212,11 +240,11 @@ html {
   opacity: 0;
 }
 #screen2 #s2FeaturesWindow {
-  width: 86%;
+  width: 84vw;
   display: flex;
   grid-gap: 80px;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 24px;
+  margin-bottom: 28px;
   overflow: hidden;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont {
@@ -232,7 +260,18 @@ html {
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock img.s2FeatureImg {
   width: 38vw;
-  margin-bottom: 8px;
+  filter: brightness(100%);
+  transition-property: filter;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
+  transition-delay: 0s;
+}
+#screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock img.s2FeatureImg:hover {
+  filter: brightness(88%);
+  transition-property: filter;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
+  transition-delay: 0s;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2FeatureCaption {
   font-size: 10vw;
@@ -242,44 +281,43 @@ html {
   font-weight: 500;
   font-style: normal;
   margin-bottom: 8px;
+  filter: brightness(100%);
+  transition-property: filter;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
+  transition-delay: 0s;
+}
+#screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2FeatureCaption:hover {
+  filter: brightness(88%);
+  transition-property: filter;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
+  transition-delay: 0s;
 }
 #screen2 #s2FeaturesWindow #s2FeaturesCont .s2FeatureBlock .s2CaptionAnno {
-  width: 86vw;
-  font-size: 5.3vw;
+  width: 84vw;
+  font-size: 5.1vw;
   color: #1b1b1b;
   text-align: center;
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
 }
-#screen2 #s2Buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 80px;
-}
-#screen2 #s2Buttons #s2ArrowLeft {
-  height: 9vw;
-  margin-right: 30px;
-}
-#screen2 #s2Buttons #s2ArrowRight {
-  height: 9vw;
-  margin-left: 30px;
-}
 #screen2 #s2Button {
-  width: 56vw;
-  height: 64px;
-  margin-bottom: 80px;
-  border-radius: 40px;
-  background: linear-gradient(270deg, #ffac38 0%, #e66b2d 50%, #e12323 100%);
-  text-align: center;
-  line-height: 60px;
-  font-size: 7vw;
-  font-family: "Averta";
-  font-weight: 400;
-  font-style: normal;
-  color: #fff;
+  margin-top: 72px;
+  margin-bottom: 48px;
+  filter: brightness(100%);
+  transition-property: filter;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
+  transition-delay: 0s;
+}
+#screen2 #s2Button:hover {
+  filter: brightness(88%);
+  transition-property: filter;
+  transition-duration: 0.4s;
+  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
+  transition-delay: 0s;
 }
 
 #screen3 {
@@ -295,7 +333,7 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 28px;
   margin-bottom: 40px;
   font-family: "Averta";
   font-weight: 400;
@@ -312,7 +350,7 @@ html {
 #screen3 #s3ImgsWindow {
   width: 100vw;
   height: 115vw;
-  margin-bottom: 40px;
+  margin-bottom: 26px;
   display: flex;
   overflow: hidden;
 }
@@ -357,7 +395,7 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 38px;
   font-family: "Averta";
   font-weight: 400;
   font-style: normal;
@@ -378,7 +416,7 @@ html {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 #screen3 #s3virtualTour #s3vtStatus {
   width: 8%;
@@ -410,7 +448,7 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 85vw;
+  width: 84vw;
 }
 #screen4 .s4personBox .s4personImg {
   width: 58vw;
@@ -439,7 +477,7 @@ html {
   font-style: normal;
   text-align: center;
   color: #fff;
-  font-size: 5.3vw;
+  font-size: 5.1vw;
   margin-bottom: 40px;
 }
 
@@ -456,8 +494,8 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top: 28px;
+  margin-bottom: 6px;
 }
 #screen5 #desktopappBox #s5Caption {
   text-align: center;
@@ -469,8 +507,8 @@ html {
   margin-bottom: 20px;
 }
 #screen5 #desktopappBox #s5buttonDesktop {
-  width: 34vw;
-  height: 52px;
+  width: 32vw;
+  height: 50px;
 }
 #screen5 #mobileappBox {
   width: 85vw;
@@ -479,7 +517,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   margin-top: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 #screen5 #mobileappBox #s5Caption2 {
   text-align: center;
@@ -491,8 +529,8 @@ html {
   margin-bottom: 30px;
 }
 #screen5 #mobileappBox #s5buttonMobile {
-  width: 34vw;
-  height: 52px;
+  width: 32vw;
+  height: 50px;
 }
 #screen5 #s5feedbackBox {
   width: 100vw;
@@ -561,19 +599,7 @@ html {
   margin-left: 48px;
 }
 #screen5 #s5feedbackBox #s5Buttons {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
-#screen5 #s5feedbackBox #s5Buttons #s5ArrowLeft {
-  height: 9vw;
-  margin-right: 30px;
-}
-#screen5 #s5feedbackBox #s5Buttons #s5ArrowRight {
-  height: 9vw;
-  margin-left: 30px;
+  margin-bottom: 42px;
 }
 #screen5 #s5PartnersBox {
   width: 100vw;
@@ -595,25 +621,25 @@ html {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 50px;
+  gap: 40px;
   overflow-y: hidden;
   overflow-x: scroll;
   margin-bottom: 12px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo {
-  width: 140px;
+  width: 120px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo:first-of-type {
-  margin-left: 80px;
+  margin-left: 60px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont img.s5PartnersLogo:last-of-type {
-  margin-right: 80px;
+  margin-right: 60px;
 }
 #screen5 #s5PartnersBox #s5PartnersCont #logoLacoste1 {
-  width: 128px !important;
+  width: 110px !important;
 }
 #screen5 #s5PartnersBox #s5PartnersCont #logoHuawei1 {
-  width: 84px !important;
+  width: 76px !important;
 }
 
 footer {
@@ -625,7 +651,7 @@ footer {
   align-items: center;
 }
 footer #fBlock1 {
-  width: 66vw;
+  width: 64vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -637,35 +663,13 @@ footer #fBlock1 #fB1Slogan {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 5.3vw;
+  font-size: 5.1vw;
   color: white;
   line-height: 22px;
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
-}
-footer #fBlock1 #fB1Slogan:hover {
-  filter: brightness(90%);
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
 }
 footer #fBlock1 #fB1Logo {
-  width: 100px;
+  height: 3.7vh;
   padding-top: 4px;
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
-}
-footer #fBlock1 #fB1Logo:hover {
-  filter: brightness(90%);
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
 }
 footer #fBlock2 {
   width: 80vw;
@@ -679,20 +683,9 @@ footer #fBlock2 #fB2Email {
   font-family: "Averta";
   font-weight: 300;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 5.1vw;
   color: white;
   margin-bottom: 6px;
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
-}
-footer #fBlock2 #fB2Email:hover {
-  filter: brightness(90%);
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
 }
 footer #fBlock2 #fB2phone {
   font-family: "Averta";
@@ -700,17 +693,6 @@ footer #fBlock2 #fB2phone {
   font-style: normal;
   font-size: 5vw;
   color: white;
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
-}
-footer #fBlock2 #fB2phone:hover {
-  filter: brightness(90%);
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
 }
 footer #fBlock3 {
   width: 80vw;
@@ -724,20 +706,9 @@ footer #fBlock3 #fB3Address {
   font-family: "Averta";
   font-weight: 500;
   font-style: normal;
-  font-size: 5vw;
+  font-size: 5.1vw;
   color: white;
   text-align: center;
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
-}
-footer #fBlock3 #fB3Address:hover {
-  filter: brightness(90%);
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
 }
 footer #fBlock4 {
   width: 56vw;
@@ -749,17 +720,6 @@ footer #fBlock4 {
 }
 footer #fBlock4 img.fB4Icon {
   height: 40px;
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
-}
-footer #fBlock4 img.fB4Icon:hover {
-  filter: brightness(90%);
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
 }
 footer #fBlock5 {
   width: 56vw;
@@ -769,13 +729,10 @@ footer #fBlock5 #fB5Tothetop {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-style: normal;
-  font-size: 5.3vw;
+  font-size: 5.1vw;
   color: #fff;
   text-align: center;
-  transition-property: filter;
-  transition-duration: 0.8s;
-  transition-timing-function: cubic-bezier(0.26, 0, 0.32, 1);
-  transition-delay: 0s;
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=stylesMobile.css.map */
