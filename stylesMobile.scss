@@ -605,6 +605,11 @@ $fullWidthTextBlock: 84vw;
                 @include avertaSemi;
                 font-size: $fontsizeCaption1;
                 color: $textOrange1;
+                @include DarkenElem1_Base;
+            }
+
+            #s5PartnersCaption:hover {
+                @include DarkenElem1_Onclick;
             }
 
             #s5PartnersCont {
@@ -620,15 +625,20 @@ $fullWidthTextBlock: 84vw;
 
                 img.s5PartnersLogo {
                     width: 120px;
+                    @include DarkenElem1_Base;
                 }
 
-                img.s5PartnersLogo:first-of-type {
-                    margin-left: 60px;
+                img.s5PartnersLogo:hover {
+                    @include DarkenElem1_Onclick;
                 }
 
-                img.s5PartnersLogo:last-of-type {
-                    margin-right: 60px;
-                }
+                // img.s5PartnersLogo:first-of-type {
+                //     margin-left: 60px;
+                // }
+
+                // img.s5PartnersLogo:last-of-type {
+                //     margin-right: 60px;
+                // }
 
                 #logoLacoste1 {
                     width: 110px !important;
@@ -665,12 +675,21 @@ $fullWidthTextBlock: 84vw;
                 font-size: $fontsizeTextOrdinary1;
                 color: white;
                 line-height: 22px;
-            } 
+                @include DarkenElem1_Base;
+            }
+            
+            #fB1Slogan:hover {
+                @include DarkenElem1_Onclick;
+            }
             
             #fB1Logo {
                 height: 3.7vh;
                 padding-top: 4px;
-        
+                @include DarkenElem1_Base;
+            }
+
+            #fB1Logo:hover {
+                @include DarkenElem1_Onclick;
             }
         }
 
@@ -687,14 +706,23 @@ $fullWidthTextBlock: 84vw;
                 font-size: $fontsizeTextOrdinary1;
                 color: white;
                 margin-bottom: 6px;
-        
+                @include DarkenElem1_Base;
+            }
+
+            #fB2Email:hover {
+                @include DarkenElem1_Onclick;
             }
 
             #fB2phone {
                 @include avertaLight;
                 font-size: 5vw;
                 color: white;
+                @include DarkenElem1_Base;
         
+            }
+
+            #fB2phone:hover {
+                @include DarkenElem1_Onclick;
             }
         }
 
@@ -711,7 +739,12 @@ $fullWidthTextBlock: 84vw;
                 font-size: $fontsizeTextOrdinary1;
                 color: white;
                 text-align: center;
+                @include DarkenElem1_Base;
         
+            }
+
+            #fB3Address:hover {
+                @include DarkenElem1_Onclick;
             }
         }
         #fBlock4 {
@@ -724,8 +757,13 @@ $fullWidthTextBlock: 84vw;
 
             img.fB4Icon {
                 height: 40px;
-        
+                @include DarkenElem1_Base;
             }
+
+            img.fB4Icon:hover {
+                @include DarkenElem1_Onclick;
+            }
+
         }
 
         #fBlock5 {

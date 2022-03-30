@@ -9,7 +9,7 @@ sass --watch stylesDesktop.scss stylesDesktop.css
 ------------ styles rules:
 - title caption size: mobile - 14vw
 - big caption size: mobile - 7vw, tablet - 40px
-- mobile boundaries for text block - 84% from screen width (84vw)
+- mobile boundaries for text block - 84% from screen width (84vw), tablet width for standart text block - 388px
 
 ------------ code style rules:
 - const name in JS always equals its HTML id, e.g. const headerMenuIcon = document.querySelector('#headerMenuIcon');
@@ -39,11 +39,13 @@ sass --watch stylesDesktop.scss stylesDesktop.css
 18.03.22 - partners block designed
 21.03.22 - footer designed
 22.03.22 - adjustements of all elements, code before making tablet version
+25.03.22 - css refactoring, new css structure
+28.03.22 - finishing adjusting mobile design
+29.03.22 - finishing adjusting tablet design
+30.03.22 - finishing adjusting desktop design, release v1.0.0 is ready
 
 ------------ TO DO:
 - turn off resize of site on mobiles
-- add custom scroll
-- adjust all styles, fonts, animations
 - correct variables names that are not in camel case
 - refactor functions that slide images, feedback etc., get rid of switch construction
 - add title screen ambient effects
@@ -51,4 +53,3 @@ sass --watch stylesDesktop.scss stylesDesktop.css
 - refactor everything
 - adjust media queries for smartphones, tablet styles
 - write real reviews in the review box
-- finish hover mixin

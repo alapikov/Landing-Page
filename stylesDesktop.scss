@@ -1,8 +1,26 @@
 @import 'stylesCommon.scss';
 
-$fontsizeCaption1: 28px;
+$fontsizeCaption1: 30px;
 $fontsizeCaption2: 24px;
 $fontsizeTextOrdinary1: 18px;
+
+// scrollbar
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 4px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    background: $textOrange1;
+}
 
 // components
 
@@ -49,10 +67,6 @@ html {
     align-items: center;
     background: linear-gradient(90deg, hsl(35deg 100% 61%) 0%, hsl(20deg 79% 54%) 50%, hsl(0deg 76% 51%) 100%);
 
-    #headerLogoCont {
-        // margin-left: 50px;
-    }
-
     #headerLogo {
         width: 9.2vh;
         margin-top: 8px;
@@ -65,7 +79,7 @@ html {
         #headerMenuIcon {
             width: 3vh;
             margin-top: 7px;
-            margin-right: 36px;
+            margin-right: 38px;
         }
     }   
 }
@@ -142,7 +156,7 @@ html {
 
     #s1Arrow {
         position: relative;
-        width: 62px;
+        width: 60px;
         margin-top: 32vh;
         margin-bottom: 2vh;
         animation-name: s1Arrow;
@@ -167,7 +181,6 @@ html {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 10px;
 
         #s2Thepowerof {
             font-size: $fontsizeCaption1;
@@ -178,7 +191,7 @@ html {
         }
 
         #s2Logo {
-            width: 202px;
+            width: 180px;
             opacity: 0;
             // js function s1Animate() after onload
         }
@@ -197,18 +210,18 @@ html {
 
         #s2FeaturesCont {
             display: grid;
-            grid-template-columns: repeat(3, 360px);
+            grid-template-columns: repeat(3, 328px);
             justify-content: center;
             transition: all 0.7s $slideSmooth1;
             margin-top: 50px;
-            padding-bottom: 50px;
+            padding-bottom: 40px;
 
             .s2FeatureBlock {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                margin-bottom: 36px;
+                margin-bottom: 28px;
 
                 img.s2FeatureImg {
                     width: 116px;
@@ -253,14 +266,14 @@ html {
     }
 
     #s2Button {
-        width: 216px;
-        height: 62px;
+        width: 200px;
+        height: 60px;
         margin-bottom: 60px;
         border-radius: 40px;
         background: $brandGradient1rev;
         text-align: center;
-        line-height: 58px;
-        font-size: $fontsizeCaption1;
+        line-height: 56px;
+        font-size: 26px;
         @include avertaReg;
         color: #fff;
     }
@@ -296,6 +309,7 @@ html {
 
     #s3ImgsWindow {
         width: 100vw;
+        max-width: 1220px;
         // height: 700px;
         margin-bottom: 10px;
         display: flex;
@@ -317,14 +331,6 @@ html {
                 width: 380px;
                 height: 510px;
                 object-fit: cover;
-            }
- 
-            img.s3Img:first-of-type {
-                padding-left: 60px;
-            }
- 
-            img.s3Img:last-of-type {
-                padding-right: 60px;
             }
         }
 
@@ -372,8 +378,10 @@ html {
     }
 
     #s3virtualTour {
-        width: 980px;
-        height: 640px;
+        width: 100vw;
+        max-width: 1220px;
+        height: 80vh;
+        min-height: 540px;
         background-color:#adabab;
         display: flex;
         flex-direction: row;
@@ -409,9 +417,9 @@ html {
 
     #s4teamCont {
         display: grid;
-        align-items: start;
+        align-items: flex-start;
         justify-items: center;
-        grid-template-columns: repeat(2, 300px);
+        grid-template-columns: repeat(3, 300px);
         grid-gap: 40px;
         margin-bottom: 40px;
 
@@ -465,8 +473,8 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 50px;
-        margin-bottom: 20px;
+        margin-top: 32px;
+        margin-bottom: 10px;
 
         #s5Caption {
             text-align: center;
@@ -489,7 +497,7 @@ html {
         align-items: center;
         justify-content: flex-start;
         margin-top: 20px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
         #s5Caption2 {
             text-align: center;
@@ -520,7 +528,8 @@ html {
         }
 
         #s5feedbackWindow {
-            // width: 100vw;
+            width: 100vw;
+            max-width: 960px;
             display: flex;
             // flex-direction: column;
             // justify-content: flex-start;
@@ -529,15 +538,16 @@ html {
             overflow-x: hidden;
 
             #s5feedbackCont {
-                // width: 100vw;
-                // height: 330px;
+                width: 100vw;
+                max-width: 960px;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
                 grid-gap: 80px;
                 transition: all 0.6s $slideSmooth1;
-                margin-bottom: 44px;
+                margin-bottom: 40px;
+                padding-bottom: 40px;
                 overflow-y: hidden;
                 overflow-x: scroll;
 
@@ -572,14 +582,6 @@ html {
                         justify-content: flex-end;
                         align-items: center;
                     }
-                }
-                
-                .s5feedbackItem:first-of-type {
-                    margin-left: 140px;
-                }
-
-                .s5feedbackItem:last-of-type {
-                    margin-right: 140px;
                 }
             }
         }
@@ -622,7 +624,7 @@ html {
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            gap: 74px;
+            gap: 58px;
             overflow-y: hidden;
             overflow-x: scroll;
             margin-bottom: 32px;
@@ -631,13 +633,13 @@ html {
                 width: 140px;
             }
 
-            img.s5PartnersLogo:first-of-type {
-                margin-left: 80px;
-            }
+            // img.s5PartnersLogo:first-of-type {
+            //     margin-left: 80px;
+            // }
 
-            img.s5PartnersLogo:last-of-type {
-                margin-right: 80px;
-            }
+            // img.s5PartnersLogo:last-of-type {
+            //     margin-right: 80px;
+            // }
 
             #logoLacoste1 {
                 width: 126px !important;
@@ -661,7 +663,7 @@ footer {
 
 
     #fBlock1 {
-        width: 28vw;
+        width: 24vw;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -674,58 +676,58 @@ footer {
             font-size: 26px;
             color: white;
             line-height: 22px;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         } 
         
-            #fB1Slogan:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB1Slogan:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
         
         #fB1Logo {
             width: 10vh;
             padding-top: 4px;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            #fB1Logo:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB1Logo:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
 
     #fBlock2 {
         width: 80vw;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 8px;
 
         #fB2Email {
             @include avertaLight;
             font-size: 22px;
             color: white;
-            margin-bottom: 6px;
-            @include footerDarkenElems
+            margin-right: 46px;
+            // @include footerDarkenElems
         }
 
-            #fB2Email:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB2Email:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
 
         #fB2phone {
             @include avertaLight;
             font-size: 22px;
             color: white;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            #fB2phone:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB2phone:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
 
     #fBlock3 {
@@ -734,20 +736,20 @@ footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 6px;
 
         #fB3Address {
             @include avertaSemi;
             font-size: 22px;
             color: white;
             text-align: center;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            #fB3Address:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB3Address:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
     #fBlock4 {
         width: 14vw;
@@ -755,29 +757,29 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 2px;
 
         img.fB4Icon {
             height: 40px;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            img.fB4Icon:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // img.fB4Icon:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
 
     #fBlock5 {
         width: 56vw;
-        margin-bottom: 40px;
+        margin-bottom: 24px;
         
         #fB5Tothetop {
             @include sourcesansReg;
             font-size: 22px;
             color: #fff;
             text-align: center;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
     }
 }

@@ -1,8 +1,12 @@
 @import 'stylesCommon.scss';
 
-$fontsizeCaption1: 38px;
-$fontsizeCaption2: 32px;
-$fontsizeTextOrdinary1: 26px;
+$fontsizeTitle: 76px;
+$fontsizeSubTitle: 42px;
+$fontsizeCaption1: 34px;
+$fontsizeCaption2: 40px;
+$fontsizeSubCaption2: 32px;
+$fontsizeTextOrdinary1: 24px;
+$fullWidthTextBlock: 388px;
 
 // components
 
@@ -12,7 +16,7 @@ $fontsizeTextOrdinary1: 26px;
         color: $textOrange1;
         background-color: #fff;
     @include avertaReg;
-    font-size: 32px;
+    font-size: 30px;
     transition-property: color, background-color;
     transition-duration: 0.7s;
     transition-timing-function: $slideHarsh1;
@@ -41,6 +45,7 @@ html {
 #header {
     width: 100vw;
     height: 5.2vh;
+    min-height: 45px;
     position: fixed;
     z-index: 10;
     display: flex;
@@ -107,7 +112,7 @@ html {
     }
 
     #s1CaptionTop {
-        font-size: 76px;
+        font-size: $fontsizeTitle;
         line-height: 84px;
         color: #fff;
         text-align: center;
@@ -142,7 +147,7 @@ html {
     #s1Arrow {
         position: relative;
         width: 72px;
-        margin-top: 32vh;
+        margin-top: 34vh;
         margin-bottom: 2vh;
         animation-name: s1Arrow;
         animation-duration: 1.2s;
@@ -196,11 +201,11 @@ html {
             // flex-direction: row;
             // justify-content: flex-start;
             // align-items: center;
-            grid-gap: 80px;
+            grid-gap: 56px;
             transition: all 0.7s $slideSmooth1;
             overflow-y: hidden;
             overflow-x: scroll;
-            padding-bottom: 50px;
+            padding-bottom: 20px;
 
             .s2FeatureBlock {
                 display: flex;
@@ -211,12 +216,12 @@ html {
                 // last .s2FeatureBlock has m-right: 0px, style below
 
                 img.s2FeatureImg {
-                    width: 172px;
+                    width: 168px;
                     // margin-bottom: 8px;
                 }
 
                 .s2FeatureCaption {
-                    font-size: 52px;
+                    font-size: 50px;
                     color: $textOrange1;
                     text-align: center;
                     @include avertaSemi;
@@ -225,7 +230,7 @@ html {
                 }
 
                 .s2CaptionAnno {
-                    width: 420px;
+                    width: $fullWidthTextBlock;
                     font-size: $fontsizeTextOrdinary1;
                     color: $textBlack1;
                     text-align: center;
@@ -234,11 +239,11 @@ html {
             }
 
             .s2FeatureBlock:first-child {
-                margin-left: 100px;
+                margin-left: 80px;
             }
 
             .s2FeatureBlock:last-child {
-                margin-right: 100px;
+                margin-right: 80px;
             }
         }
 
@@ -263,9 +268,9 @@ html {
     }
 
     #s2Button {
-        width: 306px;
+        width: 270px;
         height: 72px;
-        margin-bottom: 80px;
+        margin-bottom: 60px;
         border-radius: 40px;
         background: $brandGradient1rev;
         text-align: center;
@@ -289,8 +294,7 @@ html {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        margin-top: 40px;
-        margin-bottom: 10px;
+        margin-top: 28px;
         @include avertaReg;
         font-size: $fontsizeCaption1;
         color: #fff;
@@ -365,7 +369,7 @@ html {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
         @include avertaReg;
         font-size: $fontsizeCaption1;
         color: #fff;
@@ -381,13 +385,13 @@ html {
 
     #s3virtualTour {
         width: 100vw;
-        height: 125vw;
+        height: 86vh;
         background-color:#adabab;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-bottom: 60px;
+        margin-bottom: 40px;
 
         #s3vtStatus {
             width: 40px;
@@ -420,7 +424,7 @@ html {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        width: 520px;
+        width: 490px;
 
         .s4personImg {
             width: 360px;
@@ -431,14 +435,14 @@ html {
         .s4personName {
             @include avertaSemi;
             color: #fff;
-            font-size: $fontsizeCaption1;
+            font-size: $fontsizeCaption2;
             // margin-bottom: -2px;
         }
 
         .s4personPosition {
             @include avertaLight;
             color: #fff;
-            font-size: $fontsizeCaption2;
+            font-size: $fontsizeSubCaption2;
             margin-bottom: 8px;
             margin-top: -4px;
         }
@@ -466,20 +470,20 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 50px;
+        margin-top: 28px;
         margin-bottom: 20px;
 
         #s5Caption {
             text-align: center;
             @include sourcesansReg;
-            font-size: $fontsizeCaption2;
+            font-size: 30px;
             color: $textOrange1;
             margin-bottom: 20px;
         }
 
         #s5buttonDesktop {
-            width: 220px;
-            height: 62px;
+            width: 200px;
+            height: 60px;
         }
     }
 
@@ -489,20 +493,20 @@ html {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        margin-top: 20px;
-        margin-bottom: 50px;
+        margin-top: 8px;
+        margin-bottom: 32px;
 
         #s5Caption2 {
             text-align: center;
             @include sourcesansReg;
-            font-size: 32px;
+            font-size: 30px;
             color: $textOrange1;
             margin-bottom: 30px;
         }
 
         #s5buttonMobile {
-            width: 220px;
-            height: 62px;
+            width: 200px;
+            height: 60px;
         }
     }
 
@@ -516,7 +520,7 @@ html {
         #s5Caption3 {
             text-align: center;
             @include avertaReg;
-            font-size: 40px;
+            font-size: $fontsizeCaption1;
             margin-bottom: 44px;
         }
 
@@ -536,7 +540,7 @@ html {
                 flex-direction: row;
                 justify-content: flex-start;
                 align-items: center;
-                grid-gap: 80px;
+                grid-gap: 60px;
                 transition: all 0.6s $slideSmooth1;
                 margin-bottom: 44px;
                 overflow-y: hidden;
@@ -560,6 +564,7 @@ html {
                         @include sourcesansReg;
                         font-size: $fontsizeTextOrdinary1;
                         margin-bottom: 8px;
+                        width: 400px;
                     }
                     
                     .s5feedbackCompany {
@@ -574,11 +579,11 @@ html {
                 }
                 
                 .s5feedbackItem:first-of-type {
-                    margin-left: 140px;
+                    margin-left: 90px;
                 }
 
                 .s5feedbackItem:last-of-type {
-                    margin-right: 140px;
+                    margin-right: 90px;
                 }
             }
         }
@@ -624,17 +629,16 @@ html {
             gap: 74px;
             overflow-y: hidden;
             overflow-x: scroll;
-            margin-bottom: 32px;
 
             img.s5PartnersLogo {
                 width: 160px;
             }
 
-            img.s5PartnersLogo:first-of-type {
+            #logoPhilips1 {
                 margin-left: 80px;
             }
 
-            img.s5PartnersLogo:last-of-type {
+            #logoCitibank1 {
                 margin-right: 80px;
             }
 
@@ -660,7 +664,8 @@ footer {
 
 
     #fBlock1 {
-        width: 44vw;
+        width: 50vw;
+        max-width: 500px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -673,58 +678,59 @@ footer {
             font-size: 26px;
             color: white;
             line-height: 22px;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         } 
         
-            #fB1Slogan:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB1Slogan:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
         
         #fB1Logo {
-            width: 10vh;
+            width: 9.2vh;
+            min-width: 92px;
             padding-top: 4px;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            #fB1Logo:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB1Logo:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
 
     #fBlock2 {
         width: 80vw;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
 
         #fB2Email {
             @include avertaLight;
-            font-size: 28px;
+            font-size: $fontsizeTextOrdinary1;
             color: white;
-            margin-bottom: 6px;
-            @include footerDarkenElems
+            margin-right: 40px;
+            // @include footerDarkenElems
         }
 
-            #fB2Email:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB2Email:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
 
         #fB2phone {
             @include avertaLight;
-            font-size: 28px;
+            font-size: $fontsizeTextOrdinary1;
             color: white;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            #fB2phone:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB2phone:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
 
     #fBlock3 {
@@ -733,50 +739,50 @@ footer {
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 12px;
+        margin-bottom: 6px;
 
         #fB3Address {
             @include avertaSemi;
-            font-size: 28px;
+            font-size: $fontsizeTextOrdinary1;
             color: white;
             text-align: center;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            #fB3Address:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // #fB3Address:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
     #fBlock4 {
-        width: 34vw;
+        width: 260px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
 
         img.fB4Icon {
             height: 40px;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
 
-            img.fB4Icon:hover {
-                filter: brightness(90%);
-                @include footerDarkenElems
-            }
+            // img.fB4Icon:hover {
+            //     filter: brightness(90%);
+            //     @include footerDarkenElems
+            // }
     }
 
     #fBlock5 {
         width: 56vw;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
         
         #fB5Tothetop {
             @include sourcesansReg;
-            font-size: 28px;
+            font-size: $fontsizeTextOrdinary1;
             color: #fff;
             text-align: center;
-            @include footerDarkenElems
+            // @include footerDarkenElems
         }
     }
 }
