@@ -44,6 +44,8 @@ sass --watch stylesDesktop.scss stylesDesktop.css
 29.03.22 - finishing adjusting tablet design
 30.03.22 - finishing adjusting desktop design, release v1.0.0 is ready
 
+04.04.22 - added custom cursor, an attempt to make animated header gradient, 
+
 ------------ TO DO:
 - turn off resize of site on mobiles
 - correct variables names that are not in camel case

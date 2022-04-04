@@ -9,6 +9,7 @@ span {
 #body {
   background-color: #fff;
   margin: 0;
+  cursor: default;
 }
 
 @font-face {
