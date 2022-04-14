@@ -121,13 +121,13 @@ html {
         #s1Cloud {
             position: relative;
             right: 100vw;  
-            // js function s1Animate() after onload
+            
         }
 
         #s1Solutions {
             position: relative;
             left: 100vw;
-            // js function s1Animate() after onload
+            
         }
 
     }
@@ -140,7 +140,7 @@ html {
 
         #s1Foreveryone {
             opacity: 0;
-            // js function s1Animate() after onload
+            
         }
     }
 
@@ -184,7 +184,7 @@ html {
         #s2Logo {
             width: 222px;
             opacity: 0;
-            // js function s1Animate() after onload
+            
         }
     }
 
@@ -198,9 +198,7 @@ html {
 
         #s2FeaturesCont {
             display: flex;
-            // flex-direction: row;
-            // justify-content: flex-start;
-            // align-items: center;
+            
             grid-gap: 56px;
             transition: all 0.7s $slideSmooth1;
             overflow-y: hidden;
@@ -212,12 +210,11 @@ html {
                 flex-direction: column;
                 justify-content: flex-start;
                 align-items: center;
-                // margin-right: 80px;
-                // last .s2FeatureBlock has m-right: 0px, style below
+                
 
                 img.s2FeatureImg {
                     width: 168px;
-                    // margin-bottom: 8px;
+                    
                 }
 
                 .s2FeatureCaption {
@@ -251,20 +248,7 @@ html {
 
     #s2Buttons {
         display: none;
-        // flex-direction: row;
-        // justify-content: center;
-        // align-items: center;
-        // margin-bottom:80px;
-
-        // #s2ArrowLeft {
-        //     height: 9vw;
-        //     margin-right: 30px;
-        // }
-
-        // #s2ArrowRight {
-        //     height: 9vw;
-        //     margin-left: 30px;
-        // }
+        
     }
 
     #s2Button {
@@ -342,25 +326,7 @@ html {
 
         #s3ImgsArrows {
             display: none;
-        //     position: absolute;
-        //     height: 115vw;
-        //     width: 100%;
-        //     display: flex;
-        //     flex-direction: row;
-        //     justify-content: space-between;
-        //     align-items: center;
-
-        //     #s3ImgsLeft {
-        //         display: none;
-        //         height: 10vw;
-        //         padding-left: 12vw;
-        //     }
-
-        //     #s3ImgsRight {
-        //         display: none;
-        //         height: 10vw;
-        //         padding-right: 12vw;
-        //     }  
+          
         }
     } 
 
@@ -436,7 +402,7 @@ html {
             @include avertaSemi;
             color: #fff;
             font-size: $fontsizeCaption2;
-            // margin-bottom: -2px;
+            
         }
 
         .s4personPosition {
@@ -527,15 +493,13 @@ html {
         #s5feedbackWindow {
             width: 100vw;
             display: flex;
-            // flex-direction: column;
-            // justify-content: flex-start;
-            // align-items: center;
+            
             overflow-y: hidden;
             overflow-x: hidden;
 
             #s5feedbackCont {
                 width: 100vw;
-                // height: 330px;
+                
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-start;
@@ -678,25 +642,19 @@ footer {
             font-size: 26px;
             color: white;
             line-height: 22px;
-            // @include footerDarkenElems
+            
         } 
         
-            // #fB1Slogan:hover {
-            //     filter: brightness(90%);
-            //     @include footerDarkenElems
-            // }
+            
         
         #fB1Logo {
             width: 9.2vh;
             min-width: 92px;
             padding-top: 4px;
-            // @include footerDarkenElems
+            
         }
 
-            // #fB1Logo:hover {
-            //     filter: brightness(90%);
-            //     @include footerDarkenElems
-            // }
+           
     }
 
     #fBlock2 {
@@ -712,25 +670,19 @@ footer {
             font-size: $fontsizeTextOrdinary1;
             color: white;
             margin-right: 40px;
-            // @include footerDarkenElems
+            
         }
 
-            // #fB2Email:hover {
-            //     filter: brightness(90%);
-            //     @include footerDarkenElems
-            // }
+            
 
         #fB2phone {
             @include avertaLight;
             font-size: $fontsizeTextOrdinary1;
             color: white;
-            // @include footerDarkenElems
+            
         }
 
-            // #fB2phone:hover {
-            //     filter: brightness(90%);
-            //     @include footerDarkenElems
-            // }
+            
     }
 
     #fBlock3 {
@@ -746,13 +698,10 @@ footer {
             font-size: $fontsizeTextOrdinary1;
             color: white;
             text-align: center;
-            // @include footerDarkenElems
+            
         }
 
-            // #fB3Address:hover {
-            //     filter: brightness(90%);
-            //     @include footerDarkenElems
-            // }
+            
     }
     #fBlock4 {
         width: 260px;
@@ -764,13 +713,10 @@ footer {
 
         img.fB4Icon {
             height: 40px;
-            // @include footerDarkenElems
+            
         }
 
-            // img.fB4Icon:hover {
-            //     filter: brightness(90%);
-            //     @include footerDarkenElems
-            // }
+            
     }
 
     #fBlock5 {
@@ -782,7 +728,7 @@ footer {
             font-size: $fontsizeTextOrdinary1;
             color: #fff;
             text-align: center;
-            // @include footerDarkenElems
+            
         }
     }
 }
